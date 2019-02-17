@@ -6,7 +6,7 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background:        #222D31
+!!XTerm*background:        #222D31
 XTerm*foreground:        #d8d8d8
 XTerm*pointerColor:      #1ABB9B
 XTerm*faceName:          Fixed
@@ -64,6 +64,7 @@ URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
 
+
 URxvt.depth:                      32
 URxvt.background:                 [100]#222D31
 URxvt*scrollBar:                  false
@@ -74,9 +75,9 @@ URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-! URxvt*inheritPixmap:            true
-! URxvt*transparent:              true
-! URxvt*shading:                  138
+!URxvt*inheritPixmap:            true
+URxvt*transparent:              true
+URxvt*shading:                  25
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
