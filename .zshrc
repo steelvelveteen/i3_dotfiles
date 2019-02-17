@@ -11,10 +11,82 @@ export EDITOR=$VISUAL
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #ZSH_THEME="bureau"
-ZSH_THEME="bira"
+#ZSH_THEME="bira"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+# Show OS info when opening a new terminal
+neofetch
 
+# Font mode for powerlevel9k
+POWERLEVEL9K_MODE="nerdfont-complete"
 
+# Set name of the theme to load.
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
+# Prompt settings
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{green}%F{black} \uf155 %f%F{green}%k\ue0b0%f "
+
+# Separators
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b0'
+POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=$'\ue0b1'
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\ue0b2'
+POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=$'\ue0b7'
+
+# Dir colours
+POWERLEVEL9K_DIR_HOME_BACKGROUND='black'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='black'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
+# OS segment
+POWERLEVEL9K_OS_ICON_BACKGROUND='black'
+POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
+
+# VCS icons
+POWERLEVEL9K_VCS_GIT_ICON=$'\uf1d2 '
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
+POWERLEVEL9K_VCS_GIT_GITLAB_ICON=$'\uf296 '
+POWERLEVEL9K_VCS_BRANCH_ICON=$''
+POWERLEVEL9K_VCS_STAGED_ICON=$'\uf055'
+POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uf421'
+POWERLEVEL9K_VCS_UNTRACKED_ICON=$'\uf00d'
+POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
+POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
+
+# VCS colours
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='blue'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='black'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='green'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
+
+# VCS CONFIG
+POWERLEVEL9K_SHOW_CHANGESET=false
+
+# Status
+POWERLEVEL9K_OK_ICON=$'\uf164'
+POWERLEVEL9K_FAIL_ICON=$'\uf165'
+POWERLEVEL9K_CARRIAGE_RETURN_ICON=$'\uf165'
+
+# Battery
+POWERLEVEL9K_BATTERY_LOW_FOREGROUND='red'
+POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='blue'
+POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='green'
+POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
+POWERLEVEL9K_BATTERY_VERBOSE=true
+
+# Command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Command execution time stamp shown in the history command output.
+HIST_STAMPS="mm/dd/yyyy"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -49,20 +121,16 @@ source $ZSH/oh-my-zsh.sh
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 #POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
-alias eZ="vim ~/.zshrc"
-alias eX="vim ~/.Xresources"
-alias eV="vim ~/.vimrc"
-alias eP="vim ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme"
-alias xtr="xrdb ~/.Xresources"
-alias showeather="curl wttr.in/Adelaide"
+alias editz="vim ~/.zshrc"
+alias editx="vim ~/.Xresources"
+alias editv="vim ~/.vimrc"
+alias edit9k="vim ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme"
+alias sourcex="xrdb ~/.Xresources"
 alias music="ncmpcpp"
-alias sourceZ="source ~/.zshrc"
+alias sourcez="source ~/.zshrc"
 alias showalias="cat ~/.zshrc | grep alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C red -u 4"
-alias repos='cd ~/repos'
+alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles && cp ~/.i3blocks.conf ~/repos/i3_dotfiles'
 ###############################################################
-#bash ~/dotfiles/invaders.sh
-echo
-echo

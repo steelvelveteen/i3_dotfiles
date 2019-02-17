@@ -289,11 +289,26 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+
+###########################################################
+############## conky ######################################
+#### conky start is at /usr/bin ###########################
+### each start will launch two conkys. Menu and top #######
+# Ex. start_conky_maia will launch /usr/share/conky/conky.10
+# and /usr/share/conky/conky_maia
+###########################################################
+## conky_maia
+## conky_solarized
+## conky_grey
+## conky_green
+
+exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_green
+###########################################################
+###########################################################
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -327,6 +342,7 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
+###########################################################################################
 bar {
 	i3bar_command i3bar
 	status_command i3blocks
@@ -343,8 +359,8 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        #background #222D31
-        background #354951
+        background #222D31
+        #background #354951
         statusline #F9FAF9
         separator  #454947
 
@@ -375,7 +391,7 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 26
+gaps inner 8
 gaps outer -2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
