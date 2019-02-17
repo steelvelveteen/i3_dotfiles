@@ -1,4 +1,4 @@
-Install i3-blocks
+#Install i3-blocks
 * One way and only one way
 * yaourt i3blocks
 * On your .i3/config file set status_command i3blocks
