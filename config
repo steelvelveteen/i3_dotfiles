@@ -59,6 +59,7 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec mousepad
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F4 exec code
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminal -e 'mocp'
@@ -144,9 +145,9 @@ bindsym $mod+Ctrl+Left workspace prev
 #                 set $ws2 2:
 set $ws1 "⌥Configi3"
 set $ws2 "Web"
-set $ws3 "Code"
-set $ws4 "Media"
-set $ws5 "File"
+set $ws3 "File"
+set $ws4 "Code"
+set $ws5 "Media"
 set $ws6 "PDF"
 set $ws7 "✇Remote"
 set $ws8 "➑"
@@ -184,8 +185,8 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 #assign [class="Mousepad"] $ws1
 #assign [class="Google-chrome"] $ws2
-assign [class="Code"] $ws3
-assign [class="vlc"] $ws4
+assign [class="vlc"] $ws3
+assign [class="Code"] $ws4
 #assign [class="Pcmanfm"] $ws5
 #assign [class="okular"] $ws6
 assign [class="org.remmina.Remmina"] $ws7
