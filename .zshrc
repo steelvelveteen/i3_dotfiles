@@ -66,7 +66,7 @@ alias showalias="cat ~/.zshrc | grep alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C red -u 4"
 alias repos='cd ~/repos'
-alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles'
+alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles && cp ~.i3blocks.conf ~/repos/i3_dotfiles'
 ###############################################################
 #bash ~/dotfiles/invaders.sh
 echo
