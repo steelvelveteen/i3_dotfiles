@@ -9,16 +9,11 @@ export EDITOR=$VISUAL
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="adben"
-#ZSH_THEME="random"
-#ZSH_THEME="af-magic"
-ZSH_THEME="bureau"
-#ZSH_THEME="af-magic"
-#ZSH_THEME="bira"
-#ZSH_THEME="agnoster"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="aussiegeek"
-#ZSH_THEME="3den"
+
+#ZSH_THEME="bureau"
+ZSH_THEME="bira"
+
+
 
 plugins=(git)
 
@@ -66,7 +61,7 @@ alias showalias="cat ~/.zshrc | grep alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C red -u 4"
 alias repos='cd ~/repos'
-alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles && cp ~.i3blocks.conf ~/repos/i3_dotfiles'
+alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles && cp ~/.i3blocks.conf ~/repos/i3_dotfiles'
 ###############################################################
 #bash ~/dotfiles/invaders.sh
 echo
