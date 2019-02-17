@@ -58,24 +58,16 @@ alias eZ="vim ~/.zshrc"
 alias eX="vim ~/.Xresources"
 alias eV="vim ~/.vimrc"
 alias eP="vim ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme"
-alias cdO="cd ~/.oh-my-zsh/themes"
 alias xtr="xrdb ~/.Xresources"
 alias showeather="curl wttr.in/Adelaide"
-alias showmoon="curl wttr.in/Moon"
 alias music="ncmpcpp"
 alias sourceZ="source ~/.zshrc"
 alias showalias="cat ~/.zshrc | grep alias"
 alias clock="tty-clock -c -C 1 -s"
-alias chrome="google-chrome-stable"
 alias cmatrix="cmatrix -C red -u 4"
-alias dotnet='TERM=xterm dotnet'
 alias repos='cd ~/repos'
-
+alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles'
 ###############################################################
-#clear
-#archey3
 #bash ~/dotfiles/invaders.sh
 echo
 echo
-# Load virtualenvwrapper for python (after custom PATHs)
-
