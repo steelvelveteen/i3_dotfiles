@@ -1,0 +1,4 @@
+ 
+" Switch buffers using ctrl+left or ctrl+right
+map <C-left> <ESC>:bn<CR>
+map <C-right> <ESC>:bp<CR>

@@ -1,0 +1,13 @@
+# Installing mpd and ncmpcpp on linux
+sudo pacman -S or sudo apt-get install mpd ncmpcpp
+create two folder in home directory
+mkdir .ncmpcpp .mpd
+cd .mpd
+touch mpd.conf mpd.db mpd.log mpd.pid
+edit mpd.conf with file already given (copy and paste it in)
+
+cd into .ncmpcpp
+touch config
+edit file with existing one
+
+learn to use it ?)
