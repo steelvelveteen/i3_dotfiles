@@ -14,7 +14,7 @@ export EDITOR=$VISUAL
 #ZSH_THEME="bira"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # Show OS info when opening a new terminal
-neofetch
+#neofetch
 
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -23,10 +23,20 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Prompt settings
+
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k"
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k\uf1a9"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{green}%F{black} \uf155 %f%F{green}%k\ue0b0%f "
+
+#######################################################
+## The actual prompt ##
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ram dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time battery)
+
+#######################################################
 
 # Separators
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b0'
@@ -83,11 +93,11 @@ POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
 POWERLEVEL9K_BATTERY_VERBOSE=true
 
 # Command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Command execution time stamp shown in the history command output.
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git)
+plugins=(git colored-man-pages extract sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,8 +129,10 @@ source $ZSH/oh-my-zsh.sh
 # Aliaxes
 # #############################################################
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
+
+clear
+alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias cat="bat"
 alias editz="vim ~/.zshrc"
 alias editx="vim ~/.Xresources"
 alias editv="vim ~/.vimrc"
