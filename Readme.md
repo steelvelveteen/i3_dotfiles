@@ -10,12 +10,20 @@
 #### Go to
 https://github.com/FortAwesome/Font-Awesome
 
-Download the latest release and unzip in your `~/.fonts` directory
-Same for powerline-fonts
+## Other fonts
 ```
   yaourt powerline-fonts
 ```
-NerdFonts ( WIP)
+
+Download the latest release and unzip in your `~/.fonts` directory
+### Nerd Fonts
+### Go to
+https://github.com/ryanoasis/nerd-fonts
+and download the latest release
+(WARNING: Chrome might fail, so try with different browsers)
+Unzip the folder, cd into it and run `./install.sh`
+Let it do its job
+
 ### Confuring i3blocks
 * Clone bash scripts and place them in `.i3/i3scripts` folder
 
