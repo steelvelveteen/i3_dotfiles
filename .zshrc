@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -144,6 +145,7 @@ source $ZSH/oh-my-zsh.sh
 clear
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias cat="bat"
+alias ls="colorls"
 alias editz="vim ~/.zshrc"
 alias editx="vim ~/.Xresources"
 alias editv="vim ~/.vimrc"
