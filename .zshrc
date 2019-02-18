@@ -12,7 +12,7 @@ export EDITOR=$VISUAL
 
 #ZSH_THEME="bureau"
 #ZSH_THEME="bira"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+
 # Show OS info when opening a new terminal
 #neofetch
 
@@ -27,7 +27,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k\uf1a9"
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%K{white}%k"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{green}%F{black} \uf155 %f%F{green}%k\ue0b0%f "
 
 #######################################################
@@ -60,8 +60,8 @@ POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
 
 # VCS icons
 POWERLEVEL9K_VCS_GIT_ICON=$'\uf1d2 '
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
-POWERLEVEL9K_VCS_GIT_GITLAB_ICON=$'\uf296 '
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf408 '
+POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON=$'\uf171 '
 POWERLEVEL9K_VCS_BRANCH_ICON=$''
 POWERLEVEL9K_VCS_STAGED_ICON=$'\uf055'
 POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uf421'
@@ -81,9 +81,9 @@ POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
 POWERLEVEL9K_SHOW_CHANGESET=false
 
 # Status
-POWERLEVEL9K_OK_ICON=$'\uf164'
+POWERLEVEL9K_OK_ICON=$'\uf00c'
 POWERLEVEL9K_FAIL_ICON=$'\uf165'
-POWERLEVEL9K_CARRIAGE_RETURN_ICON=$'\uf165'
+POWERLEVEL9K_CARRIAGE_RETURN_ICON=$'\uf810'
 
 # Battery
 POWERLEVEL9K_BATTERY_LOW_FOREGROUND='red'
@@ -92,12 +92,23 @@ POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='green'
 POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
 POWERLEVEL9K_BATTERY_VERBOSE=true
 
+user_with_helmet() {
+    echo -n "\uf1a9 $(whoami)"
+}
+POWERLEVEL9K_CUSTOM_USER="user_with_helmet"
+
 # Command auto-correction.
 ENABLE_CORRECTION="false"
 
 # Command execution time stamp shown in the history command output.
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git colored-man-pages extract sudo)
+plugins=(git colored-man-pages extract sudo virtualenv)
+
+#Prompt elements
+## add icons_test for testing to the left_prompt
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+
 
 source $ZSH/oh-my-zsh.sh
 
