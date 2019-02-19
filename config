@@ -58,11 +58,11 @@ exec --no-startup-id pulseaudio
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec mousepad
 bindsym $mod+F2 exec google-chrome-stable
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec dolphin
 bindsym $mod+F4 exec code
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F5 exec terminal -e 'mocp'
+#bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -185,7 +185,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # Open applications on specific workspaces
 assign [class="Mousepad"] $ws1
 #assign [class="Google-chrome"] $ws2
-#assign [class="Pcmanfm"] $ws3
+#assign [class="dolphin"] $ws3
 assign [class="Code"] $ws4
 assign [class="vlc"] $ws5
 
@@ -221,6 +221,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Pcmanfm"] floating enable
+for_window [class="dolphin"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="cool-retro-term"] floating enable
 for_window [class="org.remmina.Remmina"] floating enable
@@ -375,7 +376,9 @@ bar {
         urgent_workspace   #16a085 #FDF6E3 #E5201D
     }
 }
-
+#### polybar ######################################
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#### polybar ######################################
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
