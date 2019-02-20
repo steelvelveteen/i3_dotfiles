@@ -1,3 +1,7 @@
+<div align="center">
+  ### i3 Desktop full configuration
+</div>
+
 ## Install i3-blocks
 * One way and only one way
 
