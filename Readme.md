@@ -1,5 +1,5 @@
 <div align="center">
-  ### i3 Desktop full configuration
+  # i3 Desktop full configuration
   
 </div>
 
