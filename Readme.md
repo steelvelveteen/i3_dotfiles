@@ -1,4 +1,11 @@
-## Install i3-blocks
+<div align="center">
+  
+  # i3 Desktop full configuration
+  ## ZSH, VIM, Polybar, Powerlevel9k, NerdFonts, FontAwesome, MPD
+  
+</div>
+
+### Install i3-blocks
 * One way and only one way
 
   `yaourt i3blocks`
@@ -60,3 +67,12 @@ or run command `$(which zsh)`
 Set up oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
 ### via curl
 ` sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+## Polybar
+Do a youart polybar and you will see community and aur versions. Get the aur version, usually in position 3.
+Fucking instructions!!
+There is a config example file in /usr/share/doc/polybar/config that is neither zipped and it is NOT in /usr/local/share/doc/polybar whatever as in the wiki.
+mkdir ~/config/polybar and copy that config file into your ~/.config/polybar
+
+# To terminate already running bar instances
+killall -q polybar
