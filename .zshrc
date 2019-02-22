@@ -157,5 +157,5 @@ alias showalias="cat ~/.zshrc | grep alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C red -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
-alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles && cp ~/.i3blocks.conf ~/repos/i3_dotfiles'
+alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles && cp ~/.i3blocks.conf ~/repos/i3_dotfiles && cp ~/.config/polybar/config ~/repos/i3_dotfiles/polybar'
 ###############################################################
