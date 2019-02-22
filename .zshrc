@@ -144,7 +144,7 @@ export LC_ALL=en_US.UTF-8
 # #############################################################
 
 clear
-archey3-c black
+archey3 -c black
 alias archey3="archey3 -c black"
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias cat="bat"

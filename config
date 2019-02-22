@@ -140,9 +140,6 @@ bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
 # Workspace names
-# to display names or symbols instead of plain workspace numbers you can use
-# something like: set $ws1 1:mail
-#                 set $ws2 2:
 set $ws1 "1:Configi3"
 set $ws2 "2:"
 set $ws3 "3:"
@@ -294,9 +291,9 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 #exec --no-startup-id xrandr --output eDP1 --right-of HDMI1  --auto
+
 #### polybar ###################################################### POLYBAR
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 
 ##################################################################### CONKY
 #### conky start is at /usr/bin ###########################
