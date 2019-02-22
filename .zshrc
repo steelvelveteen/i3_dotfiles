@@ -93,7 +93,8 @@ POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
 POWERLEVEL9K_BATTERY_VERBOSE=true
 
 user_with_helmet() {
-    echo -n "\uf1a9 $(whoami)"
+    #echo -n "\uf1a9 $(whoami)"
+    echo -n "\uf1a9"
 }
 POWERLEVEL9K_CUSTOM_USER="user_with_helmet"
 
@@ -118,7 +119,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -141,8 +143,9 @@ export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 # Aliaxes
 # #############################################################
 
-
 clear
+archey3-c black
+alias archey3="archey3 -c black"
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias cat="bat"
 alias ls="colorls"
