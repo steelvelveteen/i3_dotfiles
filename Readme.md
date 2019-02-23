@@ -69,6 +69,8 @@ Set up oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
 ` sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 ## Polybar
+
+First install the RIGHT font awesome: version 4, do a yaourt ttf-font-awesome and pick the one from the AUR
 Do a youart polybar and you will see community and aur versions. Get the aur version, usually in position 3.
 Fucking instructions!!
 There is a config example file in /usr/share/doc/polybar/config that is neither zipped and it is NOT in /usr/local/share/doc/polybar whatever as in the wiki.
