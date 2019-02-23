@@ -13,6 +13,9 @@
 * On your .i3/config file set status_command i3blocks
 * refresh i3wm $mod4+shift+r
 
+### VSCODE locale problem
+# Add "terminal.integrated.setLocaleVariables":true to your settings.json file
+
 ### Font Awesome and other fonts
 #### Go to
 https://github.com/FortAwesome/Font-Awesome
