@@ -144,7 +144,7 @@ set $ws1 "1:Configi3"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
-set $ws5 "5:VLC"
+set $ws5 "5:VLC"
 set $ws6 "6:MPD"
 set $ws7 "7:PDF"
 set $ws8 "8:Remmina"
@@ -181,9 +181,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Mousepad"] $ws1
+assign [class="Google-chrome"] $ws2
 assign [class="Code"] $ws4
 assign [class="vlc"] $ws5
-assign [class="org.remmina.Remmina"] $ws7
+assign [class="org.remmina.Remmina"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

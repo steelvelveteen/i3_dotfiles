@@ -60,6 +60,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
+
 font-0 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
 font-1 = FontAwesome:size=10:autohint=true:antialias=true;1
 font-2 = URWGothic-Book:size=11:autohint=true:antialias=true;1
@@ -84,6 +85,7 @@ radius = 0
 fixed-center = false
 bottom = true
 
+
 ;background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -98,6 +100,7 @@ padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
+
 
 font-0 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
 font-1 = FontAwesome:size=10:autohint=true:antialias=true;1
@@ -160,7 +163,7 @@ index-sort = true
 wrapping-scroll = false
 pin workspaces = true
 
-ws-icon-1 = Web;
+
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
@@ -344,8 +347,8 @@ label-volume = 
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = MUTED
+format-muted-foreground = ${colors.alert}
+label-muted = VOL MUTED
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #cbedb6
@@ -421,24 +424,24 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = ${colors.foreground}
-label-close =  cancel
+label-close =  CANCEL
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 = reboot
+menu-0-0 = REBOOT
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = POWER OFF
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = cancel
+menu-1-0 = CANCEL
 menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1 = REBOOT
+menu-1-1-exec = systemctl reboot
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
+menu-2-0 = POWER OFF
+menu-2-0-exec = systemctl poweroff
+menu-2-1 = CANCEL
 menu-2-1-exec = menu-open-0
 
 ; ############################################################### DATE
