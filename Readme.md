@@ -14,7 +14,7 @@
 * refresh i3wm $mod4+shift+r
 
 ### VSCODE locale problem
-# Add "terminal.integrated.setLocaleVariables":true to your settings.json file
+#### Add "terminal.integrated.setLocaleVariables":false to your settings.json file
 ```
 {
     "workbench.startupEditor": "newUntitledFile",
