@@ -15,7 +15,19 @@
 
 ### VSCODE locale problem
 # Add "terminal.integrated.setLocaleVariables":true to your settings.json file
-
+```
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Liqube Dark Code",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
+    "editor.mouseWheelZoom": true,
+    "terminal.external.linuxExec": "urxvt",
+    "editor.fontFamily": "MesloLGL Nerd Font",
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+    "terminal.integrated.setLocaleVariables":false
+}
+```
 ### Font Awesome and other fonts
 #### Go to
 https://github.com/FortAwesome/Font-Awesome
