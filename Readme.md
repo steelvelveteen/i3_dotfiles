@@ -31,6 +31,8 @@ and pick the right version from the AUR
 
 `yaourt powerline-fonts`
 
+Download the latest release and unzip in your `~/.fonts` directory
+
 ## Polybar
 
 Do a yaourt polybar and you will see *community* and *AUR* versions. Get the AUR version, usually in position 3.
@@ -71,14 +73,18 @@ killall -q polybar
     "editor.mouseWheelZoom": true,
     "terminal.external.linuxExec": "urxvt",
     "editor.fontFamily": "MesloLGL Nerd Font",
-    "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
-    "terminal.integrated.setLocaleVariables":false
+    "editor.fontSize": 16,
+    "terminal.integrated.fontFamily": "TerminessTTF Nerd Font",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.setLocaleVariables": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on"
 }
 ```
 
 
 
-Download the latest release and unzip in your `~/.fonts` directory
+
 
 
 ## VIM Setup
