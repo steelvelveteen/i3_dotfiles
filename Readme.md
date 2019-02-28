@@ -21,9 +21,9 @@ https://github.com/FortAwesome/Font-Awesome
 
 Also, for *Polybar* you will need to have installed version 4 for FontAwesome.
 For this,
-```
-yaourt ttf-font-awesome
-```
+
+`yaourt ttf-font-awesome`
+
 and pick the right version from the AUR
 
 
