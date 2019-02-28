@@ -34,11 +34,29 @@ and pick the right version from the AUR
 ## Polybar
 
 Do a yaourt polybar and you will see *community* and *AUR* versions. Get the AUR version, usually in position 3.
-There is a config example file in /usr/share/doc/polybar/config that is neither zipped and it is NOT in /usr/local/share/doc/polybar whatever as in the wiki.
+There is a config example file in /usr/share/doc/polybar/config that is neither zipped and it is NOT in /usr/local/share/doc/polybar whatever as mentioned in the wiki. Instructions may be misleading. Well, they are.
+
 Create a directory:
 
-`mkdir ~/config/polybar` and copy that config file inside your ~/.config/polybar
+`mkdir ~/.config/polybar` and copy that config file inside your ~/.config/polybar
 
+Test it by running `polybar [name of the bar module as in the config file]`
+Create a file in `~/.config/polybar` directory named `launch.sh` and add the following code.
+
+```
+#!/usr/bin/env bash
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# Launch bar1 and bar2
+polybar top &
+polybar bottom &
+echo "Bars launched..."
+```
 # To terminate already running bar instances
 killall -q polybar
 
