@@ -93,9 +93,9 @@ or run the following command
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
-* Install vim-airline https://github.com/vim-airline/vim-airline, 
-* vim-airline-themes https://github.com/vim-airline/vim-airline-themes
-* and vim-sensible
+* Install [vim-airline](https://github.com/vim-airline/vim-airline)
+* Install [vim-airline-themes]( https://github.com/vim-airline/vim-airline-themes)
+* and [vim-sensible](https://github.com/tpope/vim-sensible)
 
 Finish your vim setup by getting all the plugins you need
 *auto-pairs
