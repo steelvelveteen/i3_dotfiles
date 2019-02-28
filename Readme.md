@@ -8,8 +8,6 @@
 ## Fonts. First things first
 ### Nerd Fonts
 
-https://github.com/ryanoasis/nerd-fonts
-
 Download the latest [release.](https://github.com/ryanoasis/nerd-fonts/releases) (Aprox. 2G)
 (WARNING: Chrome might fail, so try with different browsers)
 Unzip the folder, cd into it and run `./install.sh`
