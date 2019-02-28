@@ -85,7 +85,9 @@ Finish your vim setup by getting all the plugins you need
 
 ## ZSH Setup
 * Make it your default shell
+
    `chsh -s /bin/zsh`
+   
    `sudo chsh -s /bin/zsh`
 ##### Note:
 If it can't find zsh try `/usr/bin/zsh`
