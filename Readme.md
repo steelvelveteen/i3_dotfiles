@@ -28,16 +28,16 @@ and pick the right version from the AUR
 
 
 ### Other fonts (for Powerline)
-```
-  yaourt powerline-fonts
-```
+
+`yaourt powerline-fonts`
 
 ## Polybar
 
-Do a yaourt polybar and you will see #community and aur #versions. Get the aur version, usually in position 3.
-Fucking instructions!!
+Do a yaourt polybar and you will see *community* and *AUR* versions. Get the AUR version, usually in position 3.
 There is a config example file in /usr/share/doc/polybar/config that is neither zipped and it is NOT in /usr/local/share/doc/polybar whatever as in the wiki.
-mkdir ~/config/polybar and copy that config file into your ~/.config/polybar
+Create a directory:
+
+`mkdir ~/config/polybar` and copy that config file inside your ~/.config/polybar
 
 # To terminate already running bar instances
 killall -q polybar
