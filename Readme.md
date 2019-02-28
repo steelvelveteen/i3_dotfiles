@@ -1,10 +1,18 @@
 <div align="center">
   
   # i3 Desktop full configuration
-  ## ZSH, VIM, Polybar, Powerlevel9k, NerdFonts, FontAwesome, MPD
+  ##  NerdFonts, FontAwesome, Polybar, MPD, ZSH, VIM, Powerlevel9k
   
 </div>
 
+## Fonts. First things first
+### Nerd Fonts
+### Go to
+https://github.com/ryanoasis/nerd-fonts
+and download the latest release
+(WARNING: Chrome might fail, so try with different browsers)
+Unzip the folder, cd into it and run `./install.sh`
+Let it do its job
 ### Install i3-blocks
 * One way and only one way
 
@@ -38,13 +46,7 @@ https://github.com/FortAwesome/Font-Awesome
 ```
 
 Download the latest release and unzip in your `~/.fonts` directory
-### Nerd Fonts
-### Go to
-https://github.com/ryanoasis/nerd-fonts
-and download the latest release
-(WARNING: Chrome might fail, so try with different browsers)
-Unzip the folder, cd into it and run `./install.sh`
-Let it do its job
+
 
 ### Confuring i3blocks
 * Clone bash scripts and place them in `.i3/i3scripts` folder
@@ -93,3 +95,10 @@ mkdir ~/config/polybar and copy that config file into your ~/.config/polybar
 
 # To terminate already running bar instances
 killall -q polybar
+
+<div align="center">
+  
+  # KDE specific configuration
+  ##  work in progress
+  
+</div>
