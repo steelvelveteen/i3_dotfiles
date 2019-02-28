@@ -100,10 +100,10 @@ or run the following command
 * and [vim-sensible](https://github.com/tpope/vim-sensible)
 
 Finish your vim setup by getting all the plugins you need
-*[auto-pairs](https://github.com/jiangmiao/auto-pairs)
-*[nerdtree](https://github.com/scrooloose/nerdtree)
-*[supertab](https://github.com/ervandew/supertab)
-* etc
+* [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+* [nerdtree](https://github.com/scrooloose/nerdtree)
+* [supertab](https://github.com/ervandew/supertab)
+
 
 ## Powerlevel9k
 Coming soon ...
