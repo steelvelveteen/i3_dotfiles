@@ -8,6 +8,6 @@ edit mpd.conf with file already given (copy and paste it in)
 
 cd into .ncmpcpp
 touch config
-edit file with existing one
+edit file with [existing one](https://github.com/steelvelveteen/i3_dotfiles/blob/master/config.For_mpd)
 
 learn to use it ?)
