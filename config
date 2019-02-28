@@ -34,7 +34,10 @@ bindsym $mod+Return exec terminal
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id dmenu_recency
+#bindsym $mod+d exec --no-startup-id dmenu_recency
+
+# Start rofi
+bindsym $mod+d exec rofi -show drun -columns 3
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -57,7 +60,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F1 exec mousepad /home/sentinel/.i3/config /home/sentinel/.config/polybar/config /home/sentinel/.zshrc
+bindsym $mod+F1 exec mousepad /home/sentinel/.i3/config /home/sentinel/.config/polybar/config
 bindsym $mod+F2 exec google-chrome-stable
 bindsym $mod+F3 exec dolphin
 bindsym $mod+F4 exec code
@@ -181,7 +184,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Mousepad"] $ws1
-assign [class="Google-chrome"] $ws2
+#assign [class="Google-chrome"] $ws2
 assign [class="Code"] $ws4
 assign [class="vlc"] $ws5
 assign [class="org.remmina.Remmina"] $ws8
@@ -219,6 +222,7 @@ for_window [class="vlc"] floating enable
 for_window [class="cool-retro-term"] floating enable
 for_window [class="org.remmina.Remmina"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [class="Anki"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -307,7 +311,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 ## conky_grey
 ## conky_green
 
-exec --no-startup-id start_conky_maia
+#exec --no-startup-id start_conky_maia
 
 
 

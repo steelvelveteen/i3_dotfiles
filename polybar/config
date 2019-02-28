@@ -19,10 +19,10 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #222
-background-alt = #444
+background-alt = #222
 ;foreground = ${xrdb:color7:#222}
-foreground = #828080
-foreground-alt = #444444
+foreground = #bab8b8
+foreground-alt = #545353
 primary = #cbedb6
 secondary = #e60053
 alert = #bd2c40
@@ -188,7 +188,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 ; ################################################################# MPD
 [module/mpd]
 type = internal/mpd
-format-online = <label-time> <label-song> <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat> <icon-random> <bar-progress> 
+format-online =  <icon-prev> <icon-seekb>  <label-song>  <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat> <icon-random> <label-time> <bar-progress> 
 
 icon-prev = 
 icon-stop = 
@@ -277,7 +277,7 @@ ramp-coreload-7-foreground = #ff5555
 [module/memory]
 type = internal/memory
 interval = 2
-label = RAM %gb_used% / %gb_free%
+label =  RAM %gb_used% 
 format = <label> <bar-used>
 format-prefix-foreground = ${colors.foreground}
 
@@ -303,8 +303,8 @@ interval = 3.0
 
 format-connected-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-connected = <ramp-signal> <label-connected>
-label-connected =%signal% %essid%  %downspeed:min%  %upspeed:min%
+format-connected = <ramp-signal><label-connected>
+label-connected = %essid%  %downspeed:min%  %upspeed:min%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -342,13 +342,17 @@ format-disconnected =
 [module/volume]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
-label-volume = 
+format-volume =  <ramp-volume> <bar-volume> <label-volume>
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.alert}
 label-muted = VOL MUTED
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #cbedb6
@@ -411,9 +415,9 @@ label-foreground = ${colors.foreground}
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 ; ########################################################## POWERMENU
 [module/powermenu]
@@ -448,7 +452,7 @@ menu-2-1-exec = menu-open-0
 [module/date]
 type = internal/date
 interval = 5
-date = %%{F#999} %h.%d %Y%%{F-} %%{F#ada9a9}  %H:%M%%{F-}
+date = %%{F#bab8b8} %h.%d %Y%%{F-} %%{F#bab8b8}  %H:%M%%{F-}
 format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
 
