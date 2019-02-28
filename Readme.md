@@ -16,8 +16,7 @@ Unzip the folder, cd into it and run `./install.sh`
 Let it do its job.
 
 ### Font Awesome
-
-https://github.com/FortAwesome/Font-Awesome
+Grab the latest [release here](https://github.com/FortAwesome/Font-Awesome/releases)
 
 Also, for *Polybar* you will need to have installed version 4 for FontAwesome.
 For this,
