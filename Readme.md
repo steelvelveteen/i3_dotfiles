@@ -10,13 +10,13 @@
 
 https://github.com/ryanoasis/nerd-fonts
 
-Download the latest release. (Aprox. 2G)
+Download the latest [release.](https://github.com/ryanoasis/nerd-fonts/releases) (Aprox. 2G)
 (WARNING: Chrome might fail, so try with different browsers)
 Unzip the folder, cd into it and run `./install.sh`
 Let it do its job.
 
 ### Font Awesome
-Grab the latest [release here](https://github.com/FortAwesome/Font-Awesome/releases)
+Grab the latest [release here.](https://github.com/FortAwesome/Font-Awesome/releases)
 
 Also, for *Polybar* you will need to have installed version 4 for FontAwesome.
 For this,
