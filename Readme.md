@@ -110,7 +110,7 @@ Coming soon ...
 
 
 ## ZSH Setup
-* Make it your default shell
+Make it your default shell
 
    `chsh -s /bin/zsh`
    
