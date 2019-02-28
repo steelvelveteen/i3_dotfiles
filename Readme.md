@@ -7,12 +7,26 @@
 
 ## Fonts. First things first
 ### Nerd Fonts
-### Go to
+
 https://github.com/ryanoasis/nerd-fonts
-and download the latest release
+
+Download the latest release. (Aprox. 2G)
 (WARNING: Chrome might fail, so try with different browsers)
 Unzip the folder, cd into it and run `./install.sh`
-Let it do its job
+Let it do its job.
+
+### Font Awesome and other fonts
+
+https://github.com/FortAwesome/Font-Awesome
+
+Also, for *Polybar* you will need to have installed version 4 for FontAwesome.
+For this,
+```
+yaourt ttf-font-awesome
+
+```
+and pick the right version from the AUR
+
 ### Install i3-blocks
 * One way and only one way
 
@@ -36,9 +50,7 @@ Let it do its job
     "terminal.integrated.setLocaleVariables":false
 }
 ```
-### Font Awesome and other fonts
-#### Go to
-https://github.com/FortAwesome/Font-Awesome
+
 
 ## Other fonts
 ```
@@ -87,7 +99,7 @@ Set up oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
 
 ## Polybar
 
-First install the RIGHT font awesome: version 4, do a yaourt ttf-font-awesome and pick the one from the AUR
+
 Do a youart polybar and you will see community and aur versions. Get the aur version, usually in position 3.
 Fucking instructions!!
 There is a config example file in /usr/share/doc/polybar/config that is neither zipped and it is NOT in /usr/local/share/doc/polybar whatever as in the wiki.
