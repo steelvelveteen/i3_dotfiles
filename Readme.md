@@ -105,6 +105,8 @@ Finish your vim setup by getting all the plugins you need
 *[supertab](https://github.com/ervandew/supertab)
 * etc
 
+## Powerlevel9k
+Coming soon ...
 
 
 ## ZSH Setup
