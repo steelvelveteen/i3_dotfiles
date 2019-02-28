@@ -43,6 +43,9 @@ Create a directory:
 `mkdir ~/.config/polybar` and copy that config file inside your ~/.config/polybar
 
 Test it by running `polybar [name of the bar module as in the config file]`
+#### NOTE: To terminate already running bar instances
+killall -q polybar
+
 Create a file in `~/.config/polybar` directory named `launch.sh` and add the following code.
 
 ```
@@ -59,8 +62,7 @@ polybar top &
 polybar bottom &
 echo "Bars launched..."
 ```
-# To terminate already running bar instances
-killall -q polybar
+
 
 ### VSCODE locale problem
 #### Add "terminal.integrated.setLocaleVariables":false to your settings.json file
