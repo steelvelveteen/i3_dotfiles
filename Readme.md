@@ -115,8 +115,8 @@ Finish your vim setup by getting all the plugins you need
 If it can't find zsh try `/usr/bin/zsh`
 or run command `$(which zsh)`
 
-Set up oh-my-zsh https://github.com/robbyrussell/oh-my-zsh
-### via curl
+Set up [oh-my-zsh]( https://github.com/robbyrussell/oh-my-zsh)
+##### via curl
 ` sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 
