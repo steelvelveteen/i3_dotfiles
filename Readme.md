@@ -87,9 +87,8 @@ echo "Bars launched..."
 
 
 ## VIM Setup
-* Install pathogen
-https://github.com/tpope/vim-pathogen
-or run this command
+* Install [pathogen](https://github.com/tpope/vim-pathogen)
+or run the following command
 ```
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
