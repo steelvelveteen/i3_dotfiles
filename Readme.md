@@ -3,6 +3,7 @@
   # Manjaro i3 Edition full configuration
   ##  NerdFonts, FontAwesome, Polybar, MPD, ZSH, VIM, Powerlevel9k, Rofi
   
+  ![Desktop](https://github.com/steelvelveteen/i3_dotfiles/blob/master/screenshots/screenshot.png)
   
 </div>
 
