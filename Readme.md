@@ -84,7 +84,7 @@ Copy .vimrc file into your home directory
 
 ## Powerlevel9k
 
-Make sure you have installed [powerline] fonts(#Other)
+Make sure you have installed [powerline](#Other) fonts.
 Coming soon ...
 
 
