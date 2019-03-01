@@ -62,32 +62,6 @@ polybar bottom &
 echo "Bars launched..."
 ```
 
-
-### VSCODE locale problem
-#### Add "terminal.integrated.setLocaleVariables":false to your settings.json file
-```
-{
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Liqube Dark Code",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.sideBar.location": "right",
-    "editor.mouseWheelZoom": true,
-    "terminal.external.linuxExec": "urxvt",
-    "editor.fontFamily": "MesloLGL Nerd Font",
-    "editor.fontSize": 16,
-    "terminal.integrated.fontFamily": "TerminessTTF Nerd Font",
-    "terminal.integrated.fontSize": 18,
-    "terminal.integrated.setLocaleVariables": false,
-    "editor.minimap.enabled": false,
-    "editor.wordWrap": "on"
-}
-```
-
-
-
-
-
-
 ## VIM Setup
 * Install [pathogen](https://github.com/tpope/vim-pathogen)
 or run the following command
@@ -127,7 +101,28 @@ Set up [oh-my-zsh]( https://github.com/robbyrussell/oh-my-zsh)
 
 <div align="center">
   
-  # KDE specific configuration
+  # KDE specific configuration and other settings
   ##  work in progress
   
 </div>
+  
+### VSCODE locale problem
+#### Add "terminal.integrated.setLocaleVariables":false to your settings.json file
+```
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Liqube Dark Code",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
+    "editor.mouseWheelZoom": true,
+    "terminal.external.linuxExec": "urxvt",
+    "editor.fontFamily": "MesloLGL Nerd Font",
+    "editor.fontSize": 16,
+    "terminal.integrated.fontFamily": "TerminessTTF Nerd Font",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.setLocaleVariables": false,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on"
+}
+```
+
