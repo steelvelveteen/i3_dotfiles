@@ -83,6 +83,8 @@ Create a directory inside .vim called colors and copy color scheme there.
 Copy .vimrc file into your home directory
 
 ## Powerlevel9k
+
+Make sure you have installed [powerline fonts](#Other fonts (for Powerline))
 Coming soon ...
 
 
