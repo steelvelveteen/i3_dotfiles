@@ -26,7 +26,7 @@ For this,
 and pick the right version from the AUR
 
 
-### Powerline
+### Powerline fonts
 
 These are specific to Powerlevel9k
 `yaourt powerline-fonts`
@@ -85,7 +85,7 @@ Copy .vimrc file into your home directory
 
 ## Powerlevel9k
 
-Make sure you have installed [powerline](#Powerline) fonts.
+Make sure you have installed [powerline](#Powerline-fonts) fonts.
 Coming soon ...
 
 
