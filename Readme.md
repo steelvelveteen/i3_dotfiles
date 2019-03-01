@@ -78,6 +78,9 @@ Finish your vim setup by getting all the plugins you need
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [supertab](https://github.com/ervandew/supertab)
 
+### Setting mustang color scheme for vim
+Create a directory inside .vim called colors and copy color scheme there.
+Copy .vimrc file into your home directory
 
 ## Powerlevel9k
 Coming soon ...
