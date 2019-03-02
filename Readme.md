@@ -26,8 +26,9 @@ For this,
 and pick the right version from the AUR
 
 
-### Other fonts (for Powerline)
+### Powerline fonts
 
+These are specific to Powerlevel9k
 `yaourt powerline-fonts`
 
 Download the latest release and unzip in your `~/.fonts` directory
@@ -83,6 +84,8 @@ Create a directory inside .vim called colors and copy color scheme there.
 Copy .vimrc file into your home directory
 
 ## Powerlevel9k
+
+Make sure you have installed [powerline](#Powerline-fonts) fonts.
 Coming soon ...
 
 
