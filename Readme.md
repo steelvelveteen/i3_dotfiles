@@ -105,10 +105,10 @@ Set up [oh-my-zsh]( https://github.com/robbyrussell/oh-my-zsh)
 
 ### colorls for beautiful colors when doing ls
 You will need to install first ruby on your computer if it's not already installed
-More info on the arch wiki [here](https://wiki.archlinux.org/index.php/ruby)
+More info on the arch wiki [here](https://wiki.archlinux.org/index.php/ruby).
 Then you will have to install ruby gems. You will find info on that same wiki
 Don't forget to add the binaries to your PATH
-And then you finally install [colorls](https://github.com/athityakumar/colorls)
+And then you finally install [colorls](https://github.com/athityakumar/colorls).
 
 
 <div align="center">
