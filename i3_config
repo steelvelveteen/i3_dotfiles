@@ -1,5 +1,7 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+# ADD THIS FILE TO ~/.i3/config
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4

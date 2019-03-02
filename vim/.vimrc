@@ -8,6 +8,7 @@ filetype plugin indent on
 " Set color scheme. Other good ones are bubblegum-256-dark, sorcerer, and zenburn
 :set t_Co=256
 "colorscheme xoria256
+colorscheme mustang
 "let g:airline_theme='kolor'
 " keyboard shortcuts
 let mapleader = ','
