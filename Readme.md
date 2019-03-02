@@ -77,7 +77,7 @@ or run the following command
 Finish your vim setup by getting all the plugins you need
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
-* [supertab](https://github.com/ervandew/supertab)
+ Add this line to your .vimrc `map <C-n> :NERDTreeToggle<CR>` to create a shortcut
 
 ### Setting mustang color scheme for vim
 Create a directory inside .vim called colors and copy color scheme there.
