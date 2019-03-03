@@ -72,7 +72,7 @@ URxvt.font: xft:Hack Nerd Font Mono:size=12
 
 
 URxvt.depth:                      32
-URxvt.background:                 [100]#222D31
+URxvt.background:                 [855555]#1A1B1C
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true

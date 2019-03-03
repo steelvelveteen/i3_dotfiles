@@ -23,6 +23,7 @@ noremap <silent> <leader>r :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo '
 " Switch buffers using ctrl+left or ctrl+right
 map <C-left> <ESC>:bn<CR>
 map <C-right> <ESC>:bp<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Move between windows easily
 noremap <leader><up> :wincmd k<CR>

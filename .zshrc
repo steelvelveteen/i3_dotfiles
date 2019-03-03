@@ -118,6 +118,10 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 
+# Adding Go Language to PATH
+export PATH=$PATH:/usr/local/go/bin
+# Modify GOPATH environment variable
+export GOPATH=$HOME/.go
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -158,7 +162,7 @@ alias music="ncmpcpp"
 alias sourcez="source ~/.zshrc"
 alias showalias="cat ~/.zshrc | grep alias"
 alias clock="tty-clock -c -C 1 -s"
-alias cmatrix="cmatrix -C red -u 4"
+alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles/i3_config && cp ~/.config/polybar/config ~/repos/i3_dotfiles/polybar'
 ###############################################################
