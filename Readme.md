@@ -108,8 +108,15 @@ You will need to install first ruby on your computer if it's not already install
 More info on the arch wiki [here.](https://wiki.archlinux.org/index.php/ruby)
 Then you will have to install ruby gems. You will find info on that same wiki
 Don't forget to add the binaries to your PATH
+#### NOTE: the export PATH must go in your .zshrc file
 And then you finally install [colorls.](https://github.com/athityakumar/colorls)
 
+
+## GoLang
+Download the zip file from the website [here.](https://golang.org/doc/install)
+There you will see the instructions to add the path to the go binaries
+(Also change your GOPATH env variable so it doesn't create a go directory in your home directory)
+Something like `export GOPATH=$HOME/.go`, hidden is better!! :)
 
 <div align="center">
   
