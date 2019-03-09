@@ -31,6 +31,8 @@ and pick the right version from the AUR
 These are specific to Powerlevel9k
 `yaourt powerline-fonts`
 
+https://github.com/powerline/fonts
+
 Download the latest release and unzip in your `~/.fonts` directory
 
 ## Polybar
