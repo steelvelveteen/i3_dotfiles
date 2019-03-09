@@ -50,9 +50,10 @@ func! TrimWhiteSpace()
 :endfunction
 
 " Airline
-let g:airline_powerline_fonts=3
+let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='laederon'
+let g:airline_theme='minimalist'
+"let g:airline_theme='jellybeans'
 
 " Clear search highlight with c-l
 noremap <silent> <c-l> :nohls<cr><c-l>
