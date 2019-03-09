@@ -2,6 +2,7 @@
 "set rnu
 :set mouse=a
 set visualbell
+set autowrite
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -9,7 +10,7 @@ filetype plugin indent on
 :set t_Co=256
 "colorscheme xoria256
 colorscheme mustang
-"let g:airline_theme='kolor'
+let g:airline_theme='kolor'
 " keyboard shortcuts
 let mapleader = ','
 noremap <leader>b :CtrlPBuffer<CR>
@@ -49,7 +50,7 @@ func! TrimWhiteSpace()
 :endfunction
 
 " Airline
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=3
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='laederon'
 
