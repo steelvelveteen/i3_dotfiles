@@ -1,16 +1,18 @@
-:set ft=nasm
-"set rnu
-:set mouse=a
+set ft=nasm
+set mouse=a
 set visualbell
 set autowrite
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+" Show line numbers
+set number
 " Set color scheme. Other good ones are bubblegum-256-dark, sorcerer, and zenburn
-:set t_Co=256
-"colorscheme xoria256
+set t_Co=256
+
 colorscheme mustang
-let g:airline_theme='kolor'
+
 " keyboard shortcuts
 let mapleader = ','
 noremap <leader>b :CtrlPBuffer<CR>
@@ -19,8 +21,7 @@ nnoremap <leader>f :NERDTreeFind<CR>
 noremap <leader>p :CtrlP<CR>
 noremap <leader>P :CtrlPClearCache<CR>:CtrlP<CR>
 noremap <silent> <leader>r :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-" 
+"
 " Switch buffers using ctrl+left or ctrl+right
 map <C-left> <ESC>:bn<CR>
 map <C-right> <ESC>:bp<CR>
@@ -49,12 +50,6 @@ func! TrimWhiteSpace()
   ''
 :endfunction
 
-" Airline
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#branch#enabled=1
-let g:airline_theme='minimalist'
-"let g:airline_theme='jellybeans'
 " Clear search highlight with c-l
 noremap <silent> <c-l> :nohls<cr><c-l>
 
@@ -69,8 +64,6 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-" Show line numbers
-set number
 
 " Enable filetype plugins
 filetype plugin indent on
@@ -85,6 +78,7 @@ set noswapfile
 
 " Enable auto-indent
 set ai
+set si
 
 " Use spaces instead of tabs
 set expandtab
@@ -96,8 +90,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-set ai "Auto indent
-set si "Smart indent
 
 " Ignore case while searching
 set ignorecase
@@ -160,7 +152,7 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 cnoremap w!! %!sudo tee > /dev/null %
 
 " Set the cursorline
-"set cursorline
+set cursorline
 
 "hi cursorline gui=none
 augroup CursorlineOnlyInActiveWindow
@@ -175,6 +167,15 @@ silent! source ~/.vimrc-extra
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+" Airline
+"
+let g:airline_theme='kolor'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#branch#enabled=1
+let g:airline_theme='minimalist'
+"let g:airline_theme='jellybeans'
 
 " unicode symbols
 let g:airline_left_sep = '»'
