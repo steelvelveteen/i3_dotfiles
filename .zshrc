@@ -3,18 +3,12 @@ w3mimg () { w3m -o imgdisplay=/usr/lib/w3m/w3mimgdisplay $1}
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
-  export ZSH=/home/sentinel/.oh-my-zsh
+export ZSH=/home/sentinel/.oh-my-zsh
 export VISUAL="vim"
 export EDITOR=$VISUAL
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
-#ZSH_THEME="bureau"
-#ZSH_THEME="bira"
-
-# Show OS info when opening a new terminal
-#neofetch
 
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -23,7 +17,6 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Prompt settings
-
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
@@ -94,7 +87,7 @@ POWERLEVEL9K_BATTERY_VERBOSE=true
 
 user_with_helmet() {
     #echo -n "\uf1a9 $(whoami)"
-    echo -n "\uf1a9"
+    echo -n "\uf1a9" #displays my cool icon
 }
 POWERLEVEL9K_CUSTOM_USER="user_with_helmet"
 

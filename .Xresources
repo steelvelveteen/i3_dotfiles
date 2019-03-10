@@ -64,11 +64,6 @@ URxvt.font: xft:Hack Nerd Font Mono:size=12
 !URxvt.font: xft:MesloLGS Nerd Font Mono:size=12
 ######################## FONTS #########################################
 
-! alternative font settings with 'terminus':
-! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
-! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
-!! terminus names see end of file!
-
 
 URxvt.depth:                      32
 URxvt.background:                 [855555]#1A1B1C
