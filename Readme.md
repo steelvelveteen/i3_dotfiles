@@ -74,7 +74,9 @@ or run the following command
 ```
 * Install [vim-airline](https://github.com/vim-airline/vim-airline)
 * Install [vim-airline-themes]( https://github.com/vim-airline/vim-airline-themes)
-* and [vim-sensible](https://github.com/tpope/vim-sensible)
+* Install [vim-sensible](https://github.com/tpope/vim-sensible)
+* Install [vim-go](https://github.com/fatih/vim-go)
+* Install [vim-fugitive](https://github.com/tpope/vim-fugitive)
 
 Finish your vim setup by getting all the plugins you need
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
