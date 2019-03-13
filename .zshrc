@@ -142,6 +142,7 @@ export LC_ALL=en_US.UTF-8
 
 clear
 archey3 -c black
+alias pukeskull="~/.scripts/pukeskull"
 alias golang="cd ~/repos/golang && ls"
 alias archey3="archey3 -c black"
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"

@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #191818
 background-alt = #222
 ;foreground = ${xrdb:color7:#222}
 foreground = #bab8b8
@@ -42,10 +42,10 @@ menu-1-1 = sub-item 2.2;command
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 30
-radius = 0
+radius = 6.0
 fixed-center = false
 
-;background = ${colors.background}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -55,18 +55,26 @@ border-size = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 4
 
 module-margin-left = 1
 module-margin-right = 1
 
 
-font-0 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
-font-1 = FontAwesome:size=10:autohint=true:antialias=true;1
-font-2 = URWGothic-Book:size=11:autohint=true:antialias=true;1
+font-0 = fixed:pixelsize=10;2
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
+font-2 = siji:pixelsize=10;1
+font-3 = unifont:fontformat=truetype:pixelsize=8:antialias=false;2
+font-4 = 3270Medium Nerd Font:style=Medium:size=14;3
+font-5 = Font Awesome 5 Free Solid:pixelsize=10;2
+font-6 = 3270Medium Nerd Font:style=Medium:size=12;3
+font-7 = 3270Medium Nerd Font:style=Medium:size=18;4
+font-8 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
+font-9 = FontAwesome:size=10:autohint=true:antialias=true;1
+font-10 = URWGothic-Book:size=11:autohint=true:antialias=true;1
 
 modules-left = powermenu
-modules-center = mpd volume
+modules-center = mpd volume backlight
 modules-right =  date
 
 ;tray-position = right
@@ -85,8 +93,7 @@ radius = 0
 fixed-center = false
 bottom = true
 
-
-;background = ${colors.background}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -101,24 +108,45 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
+separator = ┃
 
-font-0 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
-font-1 = FontAwesome:size=10:autohint=true:antialias=true;1
-font-2 = URWGothic-Book:size=11:autohint=true:antialias=true;1
+font-0 = fixed:pixelsize=10;2
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
+font-2 = siji:pixelsize=10;1
+font-3 = unifont:fontformat=truetype:pixelsize=8:antialias=false;2
+font-4 = 3270Medium Nerd Font:style=Medium:size=14;3
+font-5 = Font Awesome 5 Free Solid:pixelsize=10;2
+font-6 = 3270Medium Nerd Font:style=Medium:size=12;3
+font-7 = 3270Medium Nerd Font:style=Medium:size=18;4
+font-8 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
+;font-9 = FontAwesome:size=10:autohint=true:antialias=true;1
+;font-10 = URWGothic-Book:size=11:autohint=true:antialias=true;1
 
 modules-left = i3
 modules-center = xwindow 
-modules-right = xkeyboard memory cpu battery temperature wlan eth
+modules-right = xkeyboard memory cpu filesystem battery temperature wlan eth
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 cursor-click = pointer
-
+;cursor-scroll = ns-resize
 ; ################################################################ XWINDOW
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
 format = <label>
+
+; ################################################################ Filesystem
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#FFFFFF}  %mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
 
 ; ############################################################## XKEYBOARD
 [module/xkeyboard]
@@ -163,7 +191,6 @@ index-sort = true
 wrapping-scroll = false
 pin workspaces = true
 
-
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
@@ -185,25 +212,51 @@ label-urgent = %name%!
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
+; ################################################################# PULSEAUDIO
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
 ; ################################################################# MPD
 [module/mpd]
 type = internal/mpd
-format-online =  <icon-prev> <icon-seekb>  <label-song>  <icon-stop> <toggle> <icon-seekf> <icon-next> <icon-repeat> <icon-random> <label-time> <bar-progress> 
+format-online =  <icon-prev> <icon-seekb>  <label-song>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> <bar-progress> 
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekb = 
-icon-seekf = 
-icon-random = 
-icon-repeat = 🔁
+icon-prev = "   "
+icon-stop = "  "
+icon-play = "  "
+icon-pause = "  "
+icon-next = "  "
+icon-seekb = "  "
+icon-seekf = "  "
 
 bar-progress-width = 35
 bar-progress-format =  %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = ┃
-bar-progress-indicator-foreground = #ff
+bar-progress-indicator-foreground = #fff
 bar-progress-indicator-font = 3
 bar-progress-fill = ┃ 
 bar-progress-fill-foreground = ${colors.primary}
@@ -219,16 +272,18 @@ label-song-ellipsis = true
 ; ############################################################ BACKLIGHT
 [module/backlight]
 type = internal/backlight
-card = intel_backlight
-output = HDMI-1
+;card = intel_backlight
+output = eDP1
 enable-scroll = false
-format = <label> <bar>
-label = %percentage%%
+format = <label> <bar> <ramp>
+label =  %percentage%%
+
+
 
 bar-width = 10
 bar-indicator = |
-;bar-indicator-foreground = #ff
-;bar-indicator-font = 2
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
 bar-fill = ─
 ;bar-fill-font = 2
 ;bar-fill-foreground = #9f78e1
@@ -241,6 +296,7 @@ ramp-1 = 🌔
 ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
+
 ; ###################################################### XBACKLIGHT-ACPI
 [module/backlight-acpi]
 inherit = module/backlight
@@ -251,7 +307,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "   
 format-prefix-foreground = ${colors.foreground}
 format = <label> <ramp-coreload>
 label = CPU
@@ -301,24 +357,24 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected-prefix = " "
+;format-connected-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-connected = <ramp-signal><label-connected>
+format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%  %downspeed:min%  %upspeed:min%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected = " 睊 No Connection"
+label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 😱
-ramp-signal-1 = 😠
-ramp-signal-2 = 😒
-ramp-signal-3 = 😊
-ramp-signal-4 = 😃
-ramp-signal-5 = 😈
+ramp-signal-0 = "直"
+ramp-signal-1 = "直"
+ramp-signal-2 = "直"
+ramp-signal-3 = "直"
+ramp-signal-4 = "直"
 ramp-signal-foreground = ${colors.foreground}
+ramp-signal-font = 7
 
 ; ################################################################ ETH
 [module/eth]
@@ -327,7 +383,7 @@ interface = wlp2s0
 interval = 3.0
 
 ;format-connected-underline = #55aa55
-format-connected-prefix = "IP: "
+format-connected-prefix = "IP: " 
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
@@ -341,14 +397,14 @@ format-disconnected =
 ; ############################################################## VOLUME
 [module/volume]
 type = internal/alsa
-
+ 
 format-volume =  <ramp-volume> <bar-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.alert}
-label-muted = VOL MUTED
+label-muted = 🔇 muted
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -374,8 +430,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ; ############################################################# BATTERY
 [module/battery]
 type = internal/battery
-battery = BAT1 ## or BAT0
-adapter = AC0
+battery = BAT0
+adapter = AC0 #ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
@@ -395,14 +451,21 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-4 = " "
+animation-charging-3 = " "
+animation-charging-2 = " "
+animation-charging-1 = " "
+animation-charging-0 = " "
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
+animation-discharging-0 = " "
+animation-discharging-1 = " "
+animation-discharging-2 = " "
+animation-discharging-3 = " "
+animation-discharging-4 = " "
+animation-discharging-foreground = #FFFFFF
+animation-discharging-framerate = 750
 ; ######################################################## TEMPERATURE
 [module/temperature]
 type = internal/temperature
@@ -419,10 +482,17 @@ label-foreground = ${colors.foreground}
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-10 = 
 ; ########################################################## POWERMENU
 [module/powermenu]
 type = custom/menu
@@ -451,16 +521,17 @@ menu-2-0 = POWER OFF
 menu-2-0-exec = systemctl poweroff
 menu-2-1 = CANCEL
 menu-2-1-exec = menu-open-0
-
+"
 ; ############################################################### DATE
 [module/date]
 type = internal/date
 interval = 5
-date = %%{F#bab8b8} %h.%d %Y%%{F-} %%{F#bab8b8}  %H:%M%%{F-}
+
+date = "%a %b %d, %Y"
+time = " %l:%M%p "
 
 format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
-
 
 ; ################################################################ WM
 [global/wm]
