@@ -161,4 +161,7 @@ alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles/i3_config && cp ~/.config/polybar/config ~/repos/i3_dotfiles/polybar && cd ~/repos/i3_dotfiles && gst'
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.i3/config ~/.i3/config.bak && cp ~/.zshrc ~/.zshrc.bak && cp ~/.config/polybar/config ~/.config/polybar/config.bak'
+alias editpolybar='vim ~/.config/polybar/config'
+alias editcompton='vim ~/.config/compton.conf'
+alias editi3conf='vim ~/.i3/config'
 ###############################################################

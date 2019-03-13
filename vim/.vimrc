@@ -6,6 +6,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+
+
 " Show line numbers
 set number
 " Set color scheme. Other good ones are bubblegum-256-dark, sorcerer, and zenburn
