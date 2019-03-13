@@ -86,6 +86,12 @@ Finish your vim setup by getting all the plugins you need
 ### Setting mustang color scheme for vim
 Create a directory inside .vim called colors and copy color scheme there.
 Copy .vimrc file into your home directory
+Add these two lines to the mustang.vim file for transparency
+
+```
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText ctermbg=none 
+```
 
 ## Powerlevel9k
 
