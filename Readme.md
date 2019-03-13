@@ -126,7 +126,7 @@ Something like `export GOPATH=$HOME/.go`, hidden is better!! :)
   
   # KDE specific configuration and other settings
   ##  work in progress
-  [More info here[(https://wiki.manjaro.org/index.php/Install_Desktop_Environments#Install_a_basic_KDE_Plasma_environment)
+  [More info here](https://wiki.manjaro.org/index.php/Install_Desktop_Environments#Install_a_basic_KDE_Plasma_environment)
   sudo pacman -S plasma kio-extras
 </div>
   
