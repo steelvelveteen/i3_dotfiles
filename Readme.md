@@ -92,7 +92,7 @@ Add these two lines to the mustang.vim file for transparency
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=none 
 ```
-
+## EXTRA: Check this super vim setup for C/C++ development [here.](https://github.com/JBakamovic/yavide)
 ## Powerlevel9k
 
 Make sure you have installed [powerline](#Powerline-fonts) fonts.
