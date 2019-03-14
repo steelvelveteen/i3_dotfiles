@@ -1,4 +1,4 @@
-;==========================================================
+1;==========================================================
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -19,7 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background = #191818
-background = #cc000000 ;transparent polybar background yay!
+background = #cc000000
 background-alt = #222
 ;foreground = ${xrdb:color7:#222}
 foreground = #bab8b8
