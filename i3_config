@@ -1,9 +1,6 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-# set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
-
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
 new_float normal
@@ -20,6 +17,7 @@ bindsym $mod+n border normal
 # is used in the bar {} block below.
 font xft:URWGothic-Book 11
 
+
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
@@ -28,6 +26,9 @@ bindsym $mod+Return exec terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# start program launcher
+#bindsym $mod+d exec --no-startup-id dmenu_recency
 
 # Start rofi
 bindsym $mod+d exec rofi -show drun -columns 3
@@ -145,6 +146,12 @@ set $ws6 "6:MPD"
 set $ws7 "7:PDF"
 set $ws8 "8:Remmina"
 
+#set $ws1 "1 "
+#set $ws2 "2 "
+#set $ws3 "3 "
+#set $ws4 "4 "
+#set $ws5 "5 "
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -180,7 +187,7 @@ assign [class="Mousepad"] $ws1
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [title="File Transfer*"] floating enable
+for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
@@ -188,8 +195,8 @@ for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Xfburn"] floating enable
 for_window [class="Transmission-gtk"] floating enable
 for_window [class="dolphin"] floating enable
 for_window [class="vlc"] floating enable
@@ -230,6 +237,7 @@ mode "$mode_system" {
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
 mode "resize" {
+
         bindsym j resize shrink width 5 px or 5 ppt
         bindsym k resize grow height 5 px or 5 ppt
         bindsym l resize shrink height 5 px or 5 ppt
@@ -259,6 +267,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+# exec --no-startup-id blueman-applet
+# exec_always --no-startup-id sbxkb
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -268,7 +278,18 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ######################################################## COLORS XRESOURCES
-
+# Color palette used for the terminal ( ~/.Xresources file )
+# Colors are gathered based on the documentation:
+# https://i3wm.org/docs/userguide.html#xresources
+# Change the variable name at the place you want to match the color
+# of your terminal like this:
+# [example]
+# If you want your bar to have the same background color as your 
+# terminal background change the line 362 from:
+# background #14191D
+# to:
+# background $term_background
+# Same logic applied to everything else.
 set_from_resource $term_background background
 set_from_resource $term_foreground foreground
 set_from_resource $term_color0     color0
@@ -288,6 +309,9 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+# hide/unhide i3status bar
+bindsym $mod+m bar mode toggle
+
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
   client.focused          #899499 #556064 #80FFF9 #FDF6E3
@@ -298,6 +322,7 @@ set_from_resource $term_color15    color15
 
   client.background       #2B2C2B
 
+#############################
 ### settings for i3-gaps: ###
 #############################
 
