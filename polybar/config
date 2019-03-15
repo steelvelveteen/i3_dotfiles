@@ -19,12 +19,12 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background = #191818
-background = #cc000000
+background = #aa000000
 background-alt = #222
 ;foreground = ${xrdb:color7:#222}
 foreground = #bab8b8
 foreground-alt = #545353
-primary = #cbedb6
+primary = #16a193
 secondary = #e60053
 alert = #bd2c40
 
@@ -137,6 +137,8 @@ type = internal/xwindow
 label = %title:0:60:...%
 format = <label>
 
+
+
 ; ################################################################ Filesystem
 [module/filesystem]
 type = internal/fs
@@ -245,7 +247,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/mpd]
 type = internal/mpd
 format-online =  <icon-prev> <icon-seekb>  <label-song>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> <bar-progress> 
-
+format-padding = 5
 icon-prev = "   "
 icon-stop = "  "
 icon-play = "  "
@@ -254,7 +256,8 @@ icon-next = "  "
 icon-seekb = "  "
 icon-seekf = "  "
 
-bar-progress-width = 35
+format-prefix-label-song = ${colors.primary}
+bar-progress-width = 25
 bar-progress-format =  %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
 bar-progress-indicator = ┃
 bar-progress-indicator-foreground = #fff
@@ -266,9 +269,47 @@ bar-progress-empty = ┃
 bar-progress-empty-font = 3
 bar-progress-empty-foreground = #444444
 
+label-song =%title%
+format-label-song-prefix-foreground = {$colors.primary}
+;label-song = %{F#7a1B54}   %{F-} %{F#16a193}%artist% %{F-} %{F#B8eadb}*%{F-} %{F#934897} %title% %{F-}
 ;label-time-foreground = #cbdeb6RR
 label-song-maxlen = 45
 label-song-ellipsis = true
+
+; ############################################################## VOLUME
+[module/volume]
+type = internal/alsa
+ 
+format-volume =  <ramp-volume> <bar-volume> <label-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.alert}
+label-muted = 🔇 muted
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary}
+bar-volume-foreground-2 = ${colors.primary}
+bar-volume-foreground-3 = ${colors.primary}
+bar-volume-foreground-4 = #f7cf09
+bar-volume-foreground-5 = #f7cf09
+bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-7 = #ff5555
+bar-volume-foreground-8 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = ┃
+bar-volume-indicator-font = 2
+bar-volume-fill = 
+bar-volume-fill-font = 2
+bar-volume-empty = 
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ; ############################################################ BACKLIGHT
 [module/backlight]
@@ -335,8 +376,9 @@ ramp-coreload-7-foreground = #ff5555
 type = internal/memory
 interval = 2
 label =  RAM %gb_used% 
-format = <label> <bar-used>
+format = <label>  <bar-used>
 format-prefix-foreground = ${colors.foreground}
+format-padding = 1
 
 bar-used-indicator =
 bar-used-width = 15
@@ -360,10 +402,10 @@ interval = 3.0
 
 ;format-connected-prefix = " "
 format-prefix-foreground = ${colors.foreground}
+label-connected = %essid:0:15% - %{F#16a193}%signal%%%{F-} ┃ %{F#16a193} %{F-}%downspeed:min%  %upspeed:min%
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%  %downspeed:min%  %upspeed:min%
-
-format-disconnected =
+;
+format-disconnected = "wlan: off"
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = " 睊 No Connection"
@@ -377,6 +419,15 @@ ramp-signal-4 = "直"
 ramp-signal-foreground = ${colors.foreground}
 ramp-signal-font = 7
 
+; ################################################################ Netstat
+[module/netstat]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+label-connected = " %{F#ff0000} %{F-}%upspeed% %{F#00ff00} %{F-}%downspeed% "
+label-connected-background = ${colors.background-alt}
+
+
 ; ################################################################ ETH
 [module/eth]
 type = internal/network
@@ -384,49 +435,16 @@ interface = wlp2s0
 interval = 3.0
 
 ;format-connected-underline = #55aa55
-format-connected-prefix = "IP: " 
+format-connected-prefix = "eth: "
+format-connected-padding = 1
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground}
+format-disconnected-padding = 1
+format-disconnected = "eth off"
+format-disconnected-foreground = ${colors.foreground}
 
 
-; ############################################################## VOLUME
-[module/volume]
-type = internal/alsa
- 
-format-volume =  <ramp-volume> <bar-volume> <label-volume>
-label-volume = %percentage%%
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.alert}
-label-muted = 🔇 muted
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #cbedb6
-bar-volume-foreground-1 = #cbedb6
-bar-volume-foreground-2 = #cbedb6
-bar-volume-foreground-3 = #cbedb6
-bar-volume-foreground-4 = #cbedb6
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = ┃
-bar-volume-indicator-font = 2
-bar-volume-fill = 
-bar-volume-fill-font = 2
-bar-volume-empty = 
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ; ############################################################# BATTERY
 [module/battery]
