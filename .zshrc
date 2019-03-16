@@ -164,4 +164,5 @@ alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources
 alias editpolybar='vim ~/.config/polybar/config'
 alias editcompton='vim ~/.config/compton.conf'
 alias editi3conf='vim ~/.i3/config'
+alias gtypist='gtypist -c 5,0 --silent'
 ###############################################################

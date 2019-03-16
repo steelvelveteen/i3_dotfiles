@@ -1,5 +1,5 @@
 set ft=nasm
-set mouse=a
+" set mouse=a
 set visualbell
 set autowrite
 execute pathogen#infect()

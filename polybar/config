@@ -75,8 +75,8 @@ font-9 = FontAwesome:size=10:autohint=true:antialias=true;1
 font-10 = URWGothic-Book:size=11:autohint=true:antialias=true;1
 
 modules-left = powermenu
-modules-center = mpd volume backlight
-modules-right =  date
+modules-center = mpd volume xbacklight 
+modules-right = kernel battery date
 
 ;tray-position = right
 ;tray-padding = 2
@@ -125,7 +125,7 @@ font-8 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=tru
 
 modules-left = i3
 modules-center = xwindow 
-modules-right = xkeyboard memory cpu filesystem battery temperature wlan eth
+modules-right = xkeyboard memory cpu  temperature wlan eth
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -402,7 +402,7 @@ interval = 3.0
 
 ;format-connected-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-label-connected = %essid:0:15% - %{F#16a193}%signal%%%{F-} ┃ %{F#16a193} %{F-}%downspeed:min%  %upspeed:min%
+label-connected = %essid:0:15% - %signal%%%{F-} ┃ %{F#16a193} %{F-}%downspeed:min%  %upspeed:min%
 format-connected = <ramp-signal> <label-connected>
 ;
 format-disconnected = "wlan: off"
@@ -454,28 +454,28 @@ adapter = AC0 #ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+;format-charging-underline = ${colors.primary}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-underline = #ffb52a
 
 format-full-prefix = "  "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-prefix-foreground = ${colors.foreground}
+format-full-underline = ${colors.primary}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-4 = " "
 animation-charging-3 = " "
 animation-charging-2 = " "
 animation-charging-1 = " "
 animation-charging-0 = " "
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 
 animation-discharging-0 = " "
@@ -483,8 +483,9 @@ animation-discharging-1 = " "
 animation-discharging-2 = " "
 animation-discharging-3 = " "
 animation-discharging-4 = " "
-animation-discharging-foreground = #FFFFFF
+animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
+
 ; ######################################################## TEMPERATURE
 [module/temperature]
 type = internal/temperature
@@ -540,7 +541,12 @@ menu-2-0 = POWER OFF
 menu-2-0-exec = systemctl poweroff
 menu-2-1 = CANCEL
 menu-2-1-exec = menu-open-0
-"
+
+; ############################################################# KERNEL
+[module/kernel]
+type = custom/script
+exec = echo `uname -r`
+
 ; ############################################################### DATE
 [module/date]
 type = internal/date
