@@ -22,7 +22,7 @@
 background = #aa000000
 background-alt = #222
 ;foreground = ${xrdb:color7:#222}
-foreground = #bab8b8
+foreground = #f7f4f4
 foreground-alt = #545353
 primary = #16a193
 secondary = #e60053
