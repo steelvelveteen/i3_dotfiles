@@ -1,5 +1,21 @@
+"
+"     ██▒   █▓ ██▓ ███▄ ▄███▓ ██▀███   ▄████▄  
+"    ▓██░   █▒▓██▒▓██▒▀█▀ ██▒▓██ ▒ ██▒▒██▀ ▀█  
+"     ▓██  █▒░▒██▒▓██    ▓██░▓██ ░▄█ ▒▒▓█    ▄ 
+"      ▒██ █░░░██░▒██    ▒██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒
+"       ▒▀█░  ░██░▒██▒   ░██▒░██▓ ▒██▒▒ ▓███▀ ░
+"       ░ ▐░  ░▓  ░ ▒░   ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░
+"       ░ ░░   ▒ ░░  ░      ░  ░▒ ░ ▒░  ░  ▒   
+"         ░░   ▒ ░░      ░     ░░   ░ ░        
+"          ░   ░         ░      ░     ░ ░      
+"         ░                           ░        
+
+
 set ft=nasm
 " set mouse=a
+set relativenumber
+"" Bell
+set noerrorbells
 set visualbell
 set autowrite
 execute pathogen#infect()
@@ -95,6 +111,7 @@ set tabstop=4
 
 " Ignore case while searching
 set ignorecase
+set smartcase
 
 " Highlight search results
 set hlsearch
