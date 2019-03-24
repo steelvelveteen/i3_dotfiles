@@ -121,7 +121,7 @@ Don't forget to add the binaries to your PATH
 #### NOTE: the export PATH must go in your .zshrc file
 And then you finally install [colorls.](https://github.com/athityakumar/colorls)
 
-## LightDM greeter modifications
+## LightDM greeter modifications (Uses the slick-greeter)
  Found in /etc/lightdm/slick-greeter.conf
  There you may change the wallpaper. 
  Default backgrounds found at /usr/share/backgrounds
