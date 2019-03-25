@@ -246,7 +246,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ; ################################################################# MPD
 [module/mpd]
 type = internal/mpd
-format-online =  <icon-prev> <icon-seekb>  <label-song>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> <bar-progress> 
+format-online = <label-song> <bar-progress> <icon-prev> <icon-seekb>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> 
 format-padding = 5
 icon-prev = "   "
 icon-stop = "  "
