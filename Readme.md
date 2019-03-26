@@ -64,7 +64,8 @@ polybar top &
 polybar bottom &
 echo "Bars launched..."
 ```
-
+## Font resize for Xresources
+All you need is [here.](https://github.com/majutsushi/urxvt-font-size)
 ## VIM Setup
 * Install [pathogen](https://github.com/tpope/vim-pathogen)
 or run the following command
