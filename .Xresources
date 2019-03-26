@@ -54,7 +54,7 @@ XTerm*selectToClipboard: true
 *color7:                          #d8d8d8
 *color15:                         #f8f8f8
 
-Xcursor.theme: Maia
+Xcursor.theme: Maia-Cursor
 Xcursor.size:                     0
 
 ######################## FONTS (MONO Fonts!!) #########################################
@@ -81,7 +81,7 @@ URxvt.keysym.F11: perl:fullscreen:switch
 URxvt.keysym.C-plus:     perl:font-size:increase
 URxvt.keysym.C-minus:   perl:font-size:decrease
 URxvt.keysym.C-equal:  perl:font-size:reset
-  
+
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 !URxvt*inheritPixmap:            true
 !URxvt*transparent:              true
