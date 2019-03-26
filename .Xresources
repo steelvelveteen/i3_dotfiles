@@ -75,8 +75,13 @@ URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 URxvt.geometry: 90x35
 URxvt.perl-ext-common: fullscreen
+URxvt.perl-ext: font-size
 URxvt.keysym.F11: perl:fullscreen:switch
 
+URxvt.keysym.C-plus:     perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
+URxvt.keysym.C-equal:  perl:font-size:reset
+  
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 !URxvt*inheritPixmap:            true
 !URxvt*transparent:              true
