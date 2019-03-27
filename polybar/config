@@ -19,7 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background = #191818
-background = #aa000000
+background = #99000000
 background-alt = #222
 ;foreground = ${xrdb:color7:#222}
 foreground = #f7f4f4
@@ -46,6 +46,7 @@ height = 30
 radius = 6.0
 fixed-center = false
 
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -61,7 +62,6 @@ padding-right = 4
 module-margin-left = 1
 module-margin-right = 1
 
-
 font-0 = fixed:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
 font-2 = siji:pixelsize=10;1
@@ -74,10 +74,6 @@ font-8 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=tru
 font-9 = FontAwesome:size=10:autohint=true:antialias=true;1
 font-10 = URWGothic-Book:size=11:autohint=true:antialias=true;1
 
-modules-left = powermenu
-modules-center = mpd volume xbacklight 
-modules-right = kernel battery date
-
 ;tray-position = right
 ;tray-padding = 2
 
@@ -85,11 +81,15 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 cursor-click = pointer
 
+modules-left = powermenu
+modules-center = mpd  xbacklight 
+modules-right = volume pointleft kernel  battery  pointleft date
+
 ; ########################################################## BAR BOTTOM
 [bar/bottom]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 30
+height = 25
 radius = 0
 fixed-center = false
 bottom = true
@@ -109,7 +109,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-separator = ┃
+;separator = ┃
 
 font-0 = fixed:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
@@ -123,21 +123,20 @@ font-8 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=tru
 ;font-9 = FontAwesome:size=10:autohint=true:antialias=true;1
 ;font-10 = URWGothic-Book:size=11:autohint=true:antialias=true;1
 
-modules-left = i3
-modules-center = xwindow 
-modules-right = xkeyboard memory cpu  temperature wlan eth
-
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 cursor-click = pointer
 ;cursor-scroll = ns-resize
+
+modules-left = i3
+modules-center = mpd2
+modules-right = xkeyboard pointleft memory pointleft cpu pointleft temperature pointleft wlan pointleft eth
+
 ; ################################################################ XWINDOW
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
 format = <label>
-
-
 
 ; ################################################################ Filesystem
 [module/filesystem]
@@ -149,7 +148,6 @@ mount-0 = /
 label-mounted = %{F#FFFFFF}  %mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-
 
 ; ############################################################## XKEYBOARD
 [module/xkeyboard]
@@ -246,7 +244,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ; ################################################################# MPD
 [module/mpd]
 type = internal/mpd
-format-online = <label-song> <bar-progress> <icon-prev> <icon-seekb>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> 
+format-online = <icon-prev> <icon-seekb>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> 
 format-padding = 5
 icon-prev = "   "
 icon-stop = "  "
@@ -272,14 +270,21 @@ bar-progress-empty-foreground = #444444
 label-song =%title%
 format-label-song-prefix-foreground = {$colors.primary}
 ;label-song = %{F#7a1B54}   %{F-} %{F#16a193}%artist% %{F-} %{F#B8eadb}*%{F-} %{F#934897} %title% %{F-}
-;label-time-foreground = #cbdeb6RR
+label-time-foreground = ${colors.foreground}
 label-song-maxlen = 45
 label-song-ellipsis = true
+
+; ################################################################# MPD2
+[module/mpd2]
+type = internal/mpd
+format-online = <label-song>
+format-prefix-label = G
+format-prefix-label-song = ${colors.primary}
 
 ; ############################################################## VOLUME
 [module/volume]
 type = internal/alsa
- 
+
 format-volume =  <ramp-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -353,10 +358,11 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 ;format-prefix = ""
-format-prefix = " "   
+;format-prefix = " "   
+;format-prefix = "  " 
 format-prefix-foreground = ${colors.foreground}
 format = <label> <ramp-coreload>
-label = CPU
+label = "  CPU "
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-foreground = ${colors.primary}
@@ -379,8 +385,8 @@ ramp-coreload-7-foreground = #ff5555
 [module/memory]
 type = internal/memory
 interval = 2
-label =  RAM %gb_used% 
-format = <label>  <bar-used>
+label = "  RAM %gb_used% "
+format = <label>
 format-prefix-foreground = ${colors.foreground}
 format-padding = 1
 
@@ -390,10 +396,12 @@ bar-used-foreground-0 = ${colors.primary}
 bar-used-foreground-1 = #557755
 bar-used-foreground-2 = #f5a70a
 bar-used-foreground-3 = ${colors.alert}
-;bar-used-fill = ┃
-;bar-used-empty = ┃
-bar-used-fill = 
-bar-used-empty = 
+bar-used-fill = ┃┃
+bar-used-empty = ┃┃
+;bar-used-fill = 
+;bar-used-empty = 
+;bar-used-fill =  █
+;bar-used-empty =  █
 bar-used-empty-foreground = #444444
 
 ; ################################################################ WLAN
@@ -406,7 +414,8 @@ interval = 3.0
 
 ;format-connected-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-label-connected = %essid:0:15% - %signal%%%{F-} ┃ %{F#16a193} %{F-}%downspeed:min%  %upspeed:min%
+label-connected = %essid% :  %upspeed%   %downspeed%
+;label-connected = %essid:0:15% - %signal%%%{F-}  %{F#16a193} %{F-}%downspeed:min%  %upspeed:min%
 format-connected = <ramp-signal> <label-connected>
 ;
 format-disconnected = "wlan: off"
@@ -562,6 +571,17 @@ time = " %l:%M%p "
 
 format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
+
+[module/pointleft]
+content-foreground = ${colors.foreground}
+type = custom/text
+content = "  "
+
+[module/pointright]
+content-foreground = ${colors.foreground}
+type = custom/text
+content = "  "
+
 
 ; ################################################################ WM
 [global/wm]
