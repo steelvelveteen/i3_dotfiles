@@ -83,9 +83,9 @@ URxvt.keysym.C-minus:   perl:font-size:decrease
 URxvt.keysym.C-equal:  perl:font-size:reset
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-URxvt*inheritPixmap:            true
-URxvt*transparent:              true
-URxvt*shading:                  25
+!URxvt*inheritPixmap:            true
+!URxvt*transparent:              true
+!URxvt*shading:                  25
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
