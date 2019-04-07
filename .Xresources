@@ -83,9 +83,9 @@ URxvt.keysym.C-minus:   perl:font-size:decrease
 URxvt.keysym.C-equal:  perl:font-size:reset
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
-!URxvt*inheritPixmap:            true
-!URxvt*transparent:              true
-!URxvt*shading:                  25
+URxvt*inheritPixmap:            true
+URxvt*transparent:              true
+URxvt*shading:                  25
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
@@ -100,6 +100,9 @@ URxvt.keysym.Control-Up:          \033[1;5A
 URxvt.keysym.Shift-Control-Up:    \033[1;6A
 URxvt.keysym.Control-Down:        \033[1;5B
 URxvt.keysym.Shift-Control-Down:  \033[1;6B
+
+!! Other shit going on here, all commented out
+!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Rxvt.perl-ext-common:             ...,clipboard
 ! URxvt.keysym.M-C-c:               perl:clipboard:copy
 ! URxvt.keysym.M-v:                 perl:clipboard:paste
