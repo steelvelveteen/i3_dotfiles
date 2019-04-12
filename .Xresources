@@ -129,7 +129,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*fadeColor:                  color
 ! URxvt*utmpInhibit:                boolean
 ! URxvt*urgentOnBell:               boolean
-! URxvt*visualBell:                 boolean
+URxvt*visualBell:                 boolean
 ! URxvt*mapAlert:                   boolean
 ! URxvt*meta8:                      boolean
 ! URxvt*tripleclickwords:           boolean

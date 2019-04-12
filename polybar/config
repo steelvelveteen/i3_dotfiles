@@ -12,15 +12,12 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-;background = #191818
 background = #99000000
 background-alt = #222
-;foreground = ${xrdb:color7:#222}
 foreground = #f7f4f4
 foreground-alt = #545353
-primary = #16a193
-secondary = #e60053
+primary = #16c2ce
+secondary = #e002bb
 alert = #bd2c40
  
 ; ########################################
@@ -40,7 +37,6 @@ width = 100%
 height = 26
 radius = 6.0
 fixed-center = false
-
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -76,9 +72,9 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 cursor-click = pointer
 
-modules-left = powermenu
-modules-center = mpd  xbacklight 
-modules-right = volume pointleft kernel  battery  pointleft date
+modules-left = powermenu 
+modules-center = xbacklight xwindow
+modules-right = volume separator kernel  battery  separator date
 
 ; ########################################################## BAR BOTTOM
 [bar/bottom]
@@ -95,16 +91,12 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 0
-border-color = #00000000
-
 padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
 
-;separator = ┃
 
 font-0 = fixed:pixelsize=10;2
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
@@ -115,8 +107,6 @@ font-5 = Font Awesome 5 Free Solid:pixelsize=10;2
 font-6 = 3270Medium Nerd Font:style=Medium:size=12;3
 font-7 = 3270Medium Nerd Font:style=Medium:size=18;4
 font-8 = DejaVu Sans Mono for Powerline:pixelsize=11:autohint=true:antialias=true;1
-;font-9 = FontAwesome:size=10:autohint=true:antialias=true;1
-;font-10 = URWGothic-Book:size=11:autohint=true:antialias=true;1
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -124,25 +114,14 @@ cursor-click = pointer
 ;cursor-scroll = ns-resize
 
 modules-left = i3
-modules-center = mpd2
-modules-right = xkeyboard pointleft memory pointleft cpu pointleft temperature pointleft wlan pointleft eth
+modules-center = mpd2 mpd
+modules-right = xkeyboard separator memory separator cpu separator wlan separator netstat separator eth
 
-; ################################################################ XWINDOW
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:60:...%
-format = <label>
-
-; ################################################################ Filesystem
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#FFFFFF}  %mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+; ############################################################## SEPARATOR
+[module/separator]
+content-foreground = ${colors.foreground}
+type = custom/text
+content = " ┃ "
 
 ; ############################################################## XKEYBOARD
 [module/xkeyboard]
@@ -153,7 +132,6 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 
 label-layout = %layout%
-;label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -201,7 +179,6 @@ label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 label-visible =  %name%
 label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-background}
 label-visible-padding = ${self.label-focused-padding}
 
 label-urgent = %name%!
@@ -239,7 +216,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ; ################################################################# MPD
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> <icon-seekb>  <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> 
+format-online =  <icon-seekb> <icon-stop> <toggle> <icon-seekf> <label-time> 
 format-padding = 5
 icon-prev = "   "
 icon-stop = "  "
@@ -314,39 +291,6 @@ bar-volume-empty = 
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-; ############################################################ BACKLIGHT
-[module/backlight]
-type = internal/backlight
-;card = intel_backlight
-output = eDP1
-enable-scroll = false
-format = <label> <bar> <ramp>
-label =  %percentage%%
-
-
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-;bar-fill-font = 2
-;bar-fill-foreground = #9f78e1
-bar-empty = ─ 
-;bar-empty-font = 2
-;bar-empty-foreground = ${colors.foreground}
-
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
-
-; ###################################################### XBACKLIGHT-ACPI
-[module/backlight-acpi]
-inherit = module/backlight
-type = internal/backlight
-card = intel_backlight
 
 ; ################################################################## CPU
 [module/cpu]
@@ -400,22 +344,17 @@ bar-used-empty = ┃┃
 bar-used-empty-foreground = #444444
 
 ; ################################################################ WLAN
-; Disabled shows name of my network
-
 [module/wlan]
 type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-;format-connected-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-label-connected = %essid% :  %upspeed%   %downspeed%
-;label-connected = %essid:0:15% - %signal%%%{F-}  %{F#16a193} %{F-}%downspeed:min%  %upspeed:min%
+label-connected = %essid%
+
 format-connected = <ramp-signal> <label-connected>
-;
+
 format-disconnected = "wlan: off"
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = " 睊 No Connection"
 label-disconnected-foreground = ${colors.foreground-alt}
 
@@ -432,8 +371,7 @@ ramp-signal-font = 7
 type = internal/network
 interface = wlp2s0
 interval = 3.0
-label-connected = " %{F#ff0000} %{F-}%upspeed% %{F#00ff00} %{F-}%downspeed% "
-label-connected-background = ${colors.background-alt}
+label-connected = "  %upspeed%  %downspeed% "
 
 
 ; ################################################################ ETH
@@ -451,7 +389,6 @@ label-connected = %local_ip%
 format-disconnected-padding = 1
 format-disconnected = "eth off"
 format-disconnected-foreground = ${colors.foreground}
-
 
 
 ; ############################################################# BATTERY
@@ -494,33 +431,7 @@ animation-discharging-4 = " "
 animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
 
-; ######################################################## TEMPERATURE
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
-warn-temperature = 60
-units = true
 
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = %temperature-c%
-label-foreground = ${colors.foreground}
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
-ramp-5 = 
-ramp-6 = 
-ramp-7 = 
-ramp-8 = 
-ramp-9 = 
-ramp-10 = 
 
 ; ########################################################## POWERMENU
 [module/powermenu]
@@ -561,22 +472,11 @@ exec = echo `uname -r`
 type = internal/date
 interval = 5
 
-date = "%a %b %d, %Y"
+date = "%A %B %d %Y"
 time = " %l:%M%p "
 
 format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
-
-[module/pointleft]
-content-foreground = ${colors.foreground}
-type = custom/text
-content = "  "
-
-[module/pointright]
-content-foreground = ${colors.foreground}
-type = custom/text
-content = "  "
-
 
 ; ################################################################ WM
 [global/wm]
@@ -585,3 +485,79 @@ margin-bottom = 5
 
 
 ; vim:ft=dosini
+
+; ################################################################
+; ################### UNUSED MODULES #############################
+
+; ################################################################ Filesystem
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#FFFFFF}  %mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+; ######################################################## TEMPERATURE
+[module/temperature]
+;type = internal/temperature
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+warn-temperature = 60
+units = true
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-foreground = ${colors.foreground}
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+ramp-7 = 
+ramp-8 = 
+ramp-9 = 
+ramp-10 = 
+
+; ###################################################### XBACKLIGHT-ACPI
+[module/backlight-acpi]
+inherit = module/backlight
+type = internal/backlight
+card = intel_backlight
+
+; ############################################################ BACKLIGHT
+[module/backlight]
+type = internal/backlight
+;card = intel_backlight
+output = eDP1
+enable-scroll = false
+format = <label> <bar> <ramp>
+label =  %percentage%%
+
+; ################################################################ XWINDOW
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+format = <label>
+
+
+[module/pointright]
+content-foreground = ${colors.foreground}
+type = custom/text
+content = "  "
+
+
+[module/pointleft]
+content-foreground = ${colors.foreground}
+type = custom/text
+content = "  "
+

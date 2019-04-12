@@ -30,6 +30,9 @@ set number
 set t_Co=256
 
 colorscheme mustang
+set background=dark
+"colorscheme kuroi
+
 
 " keyboard shortcuts
 let mapleader = ','
