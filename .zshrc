@@ -143,6 +143,12 @@ export LC_ALL=en_US.UTF-8
 clear
 #archey3 -c black
 archey3 -c green 
+echo "~/.i3/config"
+echo "~/.config/polybar/config"
+echo "~/.config/compton.conf"
+echo "~/.Xresources"
+echo "~/.vimrc"
+echo "~/.zshrc"
 alias pukeskull="~/.scripts/pukeskull"
 alias golang="cd ~/repos/golang && ls"
 alias archey3="archey3 -c black"
@@ -152,12 +158,11 @@ alias ls="colorls"
 alias editz="vim ~/.zshrc"
 alias editx="vim ~/.Xresources"
 alias editv="vim ~/.vimrc"
-alias editnvim="nvim ~/.config/nvim/init.vim"
 alias edit9k="vim ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme"
 alias sourcex="xrdb ~/.Xresources"
 alias music="ncmpcpp"
 alias sourcez="source ~/.zshrc"
-alias showalias="cat ~/.zshrc | grep alias"
+alias showalias="cat ~/.zshrc | grep ^alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
