@@ -174,14 +174,7 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 cnoremap w!! %!sudo tee > /dev/null %
 
 " Set the cursorline
-set cursorline
-
-"hi cursorline gui=none
-augroup CursorlineOnlyInActiveWindow
-    autocmd!
-    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    autocmd WinLeave * setlocal nocursorline
-augroup END
+" set cursorline
 
 " Enhanced vim tweaks
 silent! source ~/.vimrc-extra

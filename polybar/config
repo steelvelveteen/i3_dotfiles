@@ -34,7 +34,7 @@ menu-1-1 = sub-item 2.2;command
 [bar/top]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 26
+height = 28
 radius = 6.0
 fixed-center = false
 
@@ -80,7 +80,7 @@ modules-right = volume separator kernel  battery  separator date
 [bar/bottom]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 26
+height = 28
 radius = 0
 fixed-center = false
 bottom = true
@@ -216,7 +216,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ; ################################################################# MPD
 [module/mpd]
 type = internal/mpd
-format-online =  <icon-seekb> <icon-stop> <toggle> <icon-seekf> <label-time> 
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <label-time> 
 format-padding = 5
 icon-prev = "   "
 icon-stop = "  "

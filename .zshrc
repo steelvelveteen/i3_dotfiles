@@ -45,7 +45,7 @@ POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='yellow'
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 # OS segment
 POWERLEVEL9K_OS_ICON_BACKGROUND='black'
@@ -53,9 +53,7 @@ POWERLEVEL9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
 
 # VCS icons
 POWERLEVEL9K_VCS_GIT_ICON=$'\uf1d2 '
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf408 '
-POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON=$'\uf171 '
-POWERLEVEL9K_VCS_BRANCH_ICON=$''
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf408 ' POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON=$'\uf171 ' POWERLEVEL9K_VCS_BRANCH_ICON=$''
 POWERLEVEL9K_VCS_STAGED_ICON=$'\uf055'
 POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uf421'
 POWERLEVEL9K_VCS_UNTRACKED_ICON=$'\uf00d'
@@ -170,6 +168,7 @@ alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles/i3_config && cp ~/.config/polybar/config ~/repos/i3_dotfiles/polybar && cp ~/.config/compton.conf ~/repos/i3_dotfiles/compton.conf && cd ~/repos/i3_dotfiles && gst'
+#alias backupdotfiles="~/repos/bash/./backupdotfiles"
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.i3/config ~/.i3/config.bak && cp ~/.zshrc ~/.zshrc.bak && cp ~/.config/polybar/config ~/.config/polybar/config.bak && cp ~/.config/compton.conf ~/.config/compton.conf.bak'
 alias editpolybar='vim ~/.config/polybar/config'
 alias editcompton='vim ~/.config/compton.conf'
