@@ -6,6 +6,7 @@ export TERM="xterm-256color"
 export ZSH=/home/sentinel/.oh-my-zsh
 export VISUAL="vim"
 export EDITOR=$VISUAL
+export PATH
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -117,6 +118,8 @@ export GOPATH=$HOME/.go
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Adding kdesrc-build to PATH
+export PATH=~/kde/src/kdesrc-build:$PATH
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
