@@ -35,6 +35,11 @@ https://github.com/powerline/fonts
 
 Download the latest release and unzip in your `~/.fonts` directory
 
+## colorls
+
+Install colorls by running command gem install colorls and voila. 
+Of course you should have install gem on your machine.
+
 ## Polybar
 
 Do a yaourt polybar and you will see *community* and *AUR* versions. Get the AUR version, usually in position 3.
