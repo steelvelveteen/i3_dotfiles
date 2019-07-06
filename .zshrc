@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
+# export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 
 # Adding Go Language to PATH
 export PATH=$PATH:/usr/local/go/bin
@@ -118,8 +118,6 @@ export GOPATH=$HOME/.go
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Adding kdesrc-build to PATH
-export PATH=~/kde/src/kdesrc-build:$PATH
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -151,7 +149,6 @@ echo "\t~/.Xresources -> editx"
 echo "\t~/.vimrc -> editv"
 echo "\t~/.zshrc ->  editz"
 alias pukeskull="~/.scripts/pukeskull"
-alias golang="cd ~/repos/golang && ls"
 alias archey3="archey3 -c black"
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias cat="bat"
@@ -171,7 +168,6 @@ alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles/i3_config && cp ~/.config/polybar/config ~/repos/i3_dotfiles/polybar && cp ~/.config/compton.conf ~/repos/i3_dotfiles/compton.conf && cd ~/repos/i3_dotfiles && gst'
-#alias backupdotfiles="~/repos/bash/./backupdotfiles"
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.i3/config ~/.i3/config.bak && cp ~/.zshrc ~/.zshrc.bak && cp ~/.config/polybar/config ~/.config/polybar/config.bak && cp ~/.config/compton.conf ~/.config/compton.conf.bak'
 alias editpolybar='vim ~/.config/polybar/config'
 alias editcompton='vim ~/.config/compton.conf'
