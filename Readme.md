@@ -42,11 +42,6 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 Then do a source .zshrc or sourcez
 
 
-## colorls
-
-Install colorls by running command gem install colorls and voila. 
-Of course you should have install gem on your machine.
-
 ## Polybar
 
 Do a yaourt polybar and you will see *community* and *AUR* versions. Get the AUR version, usually in position 3.
@@ -157,19 +152,22 @@ Something like `export GOPATH=$HOME/.go`, hidden is better!! :)
 #### Add "terminal.integrated.setLocaleVariables":false to your settings.json file
 ```
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Liqube Dark Code",
-    "workbench.iconTheme": "material-icon-theme",
+   "files.autoSave": "onFocusChange",
     "workbench.sideBar.location": "right",
+    "breadcrumbs.enabled": false,
+    "window.titleBarStyle": "custom",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.mouseWheelZoom": true,
     "terminal.external.linuxExec": "urxvt",
     "editor.fontFamily": "MesloLGL Nerd Font",
     "editor.fontSize": 16,
-    "terminal.integrated.fontFamily": "TerminessTTF Nerd Font",
-    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
+    "terminal.integrated.fontSize": 15,
     "terminal.integrated.setLocaleVariables": false,
     "editor.minimap.enabled": false,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Material Theme Darker High Contrast"
 }
 ```
 
