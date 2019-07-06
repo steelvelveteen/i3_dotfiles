@@ -35,6 +35,13 @@ https://github.com/powerline/fonts
 
 Download the latest release and unzip in your `~/.fonts` directory
 
+### Powerlevel9k zsh theme
+
+sudo pacman -S zsh-theme-powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+Then do a source .zshrc or sourcez
+
+
 ## colorls
 
 Install colorls by running command gem install colorls and voila. 
