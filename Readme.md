@@ -71,8 +71,10 @@ polybar top &
 polybar bottom &
 echo "Bars launched..."
 ```
-## Font resize for Xresources
+## Font resize and fullscreen urxvt
 All you need is [here.](https://github.com/majutsushi/urxvt-font-size)
+Fullscreen: [archwiki](https://wiki.archlinux.org/index.php/Rxvt-unicode#Fullscreen)
+
 ## VIM Setup
 * Install [pathogen](https://github.com/tpope/vim-pathogen)
 or run the following command
