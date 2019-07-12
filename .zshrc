@@ -7,6 +7,7 @@ export ZSH=/home/sentinel/.oh-my-zsh
 export VISUAL="vim"
 export EDITOR=$VISUAL
 export PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -145,6 +146,7 @@ archey3 -c green
 # #############################################################
 
 echo "\t~/.i3/config -> editi3"
+echo "\t~/.config/i3/config if i3 was installed on top of KDE"
 echo "\t~/.config/polybar/config -> editp"
 echo "\t~/.config/compton.conf -> editc"
 echo "\t~/.Xresources -> editx"
@@ -170,9 +172,9 @@ alias showalias="cat ~/.zshrc | grep ^alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
-alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cp ~/.i3/config ~/repos/i3_dotfiles/i3_config && cp ~/.config/polybar/config ~/repos/i3_dotfiles/polybar && cp ~/.config/compton.conf ~/repos/i3_dotfiles/compton.conf && cd ~/repos/i3_dotfiles && gst'
+alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cd ~/repos/i3_dotfiles && gst'
 #alias backupdotfiles="~/repos/bash/./backupdotfiles"
-alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.i3/config ~/.i3/config.bak && cp ~/.zshrc ~/.zshrc.bak && cp ~/.config/polybar/config ~/.config/polybar/config.bak && cp ~/.config/compton.conf ~/.config/compton.conf.bak'
+alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.zshrc ~/.zshrc.bak'
 alias editpolybar='vim ~/.config/polybar/config'
 alias editcompton='vim ~/.config/compton.conf'
 alias editi3conf='vim ~/.i3/config'
