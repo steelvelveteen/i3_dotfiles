@@ -113,9 +113,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 
 # Adding Go Language to PATH
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
 # Modify GOPATH environment variable
-export GOPATH=$HOME/.go
+# export GOPATH=$HOME/.go
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

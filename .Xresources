@@ -60,13 +60,14 @@ Xcursor.size:                     0
 ######################## FONTS (MONO Fonts!!) #########################################
 ##Do fc-list | grep -i name_of_font
 !URxvt.font: xft:TerminessTTF Nerd Font Mono:size=13
-URxvt.font: xft:Hack Nerd Font Mono:size=12
-!URxvt.font: xft:MesloLGS Nerd Font Mono:size=12
+!URxvt.font: xft:Hack Nerd Font Mono:size=12
+URxvt.font: xft:MesloLGS Nerd Font Mono:size=12
 ######################## FONTS #########################################
 
 
 URxvt.depth:                      32
-URxvt.background:                 [855555]#1A1B1C
+!URxvt.background:                 [122222]#1A1B1C
+URxvt.background:                 #1B1C1C
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true

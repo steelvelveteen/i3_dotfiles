@@ -13,7 +13,7 @@
 
 set ft=nasm
 " set mouse=a
-set relativenumber
+" set relativenumber
 "" Bell
 set noerrorbells
 set visualbell
