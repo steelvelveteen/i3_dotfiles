@@ -88,7 +88,8 @@ POWERLEVEL9K_BATTERY_VERBOSE=true
 
 user_with_helmet() {
     #echo -n "\uf1a9 $(whoami)"
-    echo -n "\uf1a9" #displays my cool icon
+    echo -n "\uf1a9 raven"
+    #echo -n "\uf1a9" #displays my cool icon
 }
 POWERLEVEL9K_CUSTOM_USER="user_with_helmet"
 
@@ -147,11 +148,11 @@ archey3 -c green
 # #############################################################
 
 echo "\t~/.i3/config -> editi3"
-echo "\t~/.config/i3/config if i3 was installed on top of KDE"
 echo "\t~/.config/polybar/config -> editp"
 echo "\t~/.config/compton.conf -> editc"
 echo "\t~/.Xresources -> editx"
 echo "\t~/.vimrc -> editv"
+echo "\t~/.config/nvim/init.vim -> editnv"
 echo "\t~/.zshrc ->  editz"
 alias archey3="archey3 -c black"
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
@@ -163,20 +164,17 @@ alias editc="vim ~/.config/compton.conf"
 alias editz="vim ~/.zshrc"
 alias editx="vim ~/.Xresources"
 alias editv="vim ~/.vimrc"
+alias editnv="vim ~/.config/nvim/init.vim"
 alias editneo="nvim ~/.config/nvim/init.vim"
 alias edit9k="vim ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme"
 alias sourcex="xrdb ~/.Xresources"
-alias music="ncmpcpp"
+alias music="mpd && ncmpcpp"
 alias sourcez="source ~/.zshrc"
 alias showalias="cat ~/.zshrc | grep ^alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cd ~/repos/i3_dotfiles && gst'
-#alias backupdotfiles="~/repos/bash/./backupdotfiles"
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.zshrc ~/.zshrc.bak'
-alias editpolybar='vim ~/.config/polybar/config'
-alias editcompton='vim ~/.config/compton.conf'
-alias editi3conf='vim ~/.i3/config'
 alias gtypist='gtypist -c 5,0 --silent'
 ###############################################################

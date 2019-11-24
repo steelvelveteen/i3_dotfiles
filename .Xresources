@@ -67,12 +67,12 @@ URxvt.font: xft:MesloLGS Nerd Font Mono:size=12
 
 URxvt.depth:                      32
 !URxvt.background:                 [122222]#1A1B1C
-URxvt.background:                 #1B1C1C
+URxvt.background:                 #0F0F0F
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 black
-URxvt*foreground:                 grey
+!URxvt*background:                 black
+!URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 URxvt.geometry: 90x35
 URxvt.perl-ext-common: fullscreen
