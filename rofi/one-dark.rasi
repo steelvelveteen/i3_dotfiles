@@ -1,0 +1,114 @@
+/* RASI Theme */
+* {
+    background:                      #001e2127;
+    bordercolor:                     #001e2127;
+    separatorcolor:                  #1e2127;
+    normal-background:               #1e2127;
+    normal-foreground:               #c0cadf;
+    alternate-normal-foreground:     #1e2127;
+    selected-normal-background:      #1e2127;
+    selected-normal-foreground:      #61afef;
+    active-background:               #1e2127;
+    active-foreground:               #61afef;
+    alternate-active-background:     #1e2127;
+    selected-active-background:      #1e2127;
+    selected-active-foreground:      #61afef;
+    urgent-background:               #1e2127;
+    urgent-foreground:               #61afef;
+    alternate-urgent-background:     #1e2127;
+    selected-urgent-background:      #1e2127;
+    selected-urgent-foreground:      #e06c75;
+    alternate-normal-foreground:     @normal-foreground;
+    alternate-urgent-foreground:     @urgent-foreground;
+    alternate-active-foreground:     @active-foreground;
+    foreground:                      @normal-foreground;
+}
+
+* {
+    spacing:    10;
+    border-color: @foreground;
+    background-color: @normal-background;
+}
+#window {
+    border:     0;
+    padding:    500;
+    background-color: @background;
+}
+#mainbox {
+    border:  0;
+    padding: 100;
+}
+#message {
+    border:  1px solid 0px 0px ;
+    padding: 2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    border-color: @separatorcolor;
+}
+#listview {
+    fixed-height: 0;
+    border:       2px solid 0px 0px ;
+    padding:      2px 0px 0px ;
+}
+#element {
+    border: 0;
+}
+#element normal.normal {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+#element normal.urgent {
+    text-color: @urgent-foreground;
+    background-color: @urgent-background;
+}
+#element normal.active {
+    text-color: @active-foreground;
+    background-color: @active-background;
+}
+#element selected.normal {
+    text-color: @selected-normal-foreground;
+    background-color: @selected-normal-background;
+}
+#element selected.urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+#element selected.active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
+#element alternate.normal {
+    text-color: @alternate-normal-foreground;
+    background-color: @alternate-normal-background;
+}
+#element alternate.urgent {
+    text-color: @alternate-urgent-foreground;
+    background-color: @alternate-urgent-background;
+}
+#element alternate.active {
+    text-color: @alternate-active-foreground;
+    background-color: @alternate-active-background;
+}
+#scrollbar {
+    border:  0;
+    width: 4px;
+    padding: 0;
+    handle-color: @normal-foreground;
+}
+#sidebar {
+    border:       2px solid 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#inputbar, case-indicator, entry, prompt, button {
+    spacing: 15;
+    text-color:      @normal-foreground;
+}
+// vim:ft=css

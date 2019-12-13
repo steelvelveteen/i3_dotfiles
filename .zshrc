@@ -13,6 +13,9 @@ export PATH="$HOME/.dotnet/tools:$PATH"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
+# Blur shit. It works!!!
+xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id `xdotool search --class urxvt`
+
 # Font mode for powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
 
@@ -104,7 +107,6 @@ plugins=(git colored-man-pages extract sudo virtualenv)
 ## add icons_test for testing to the left_prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-
 
 source $ZSH/oh-my-zsh.sh
 

@@ -10,7 +10,7 @@ Xft.lcdfilter: lcddefault
 XTerm*foreground:        #d8d8d8
 XTerm*pointerColor:      #1ABB9B
 XTerm*faceName:          Fixed
-XTerm*faceSize:          11
+XTerm*faceSize:          11 
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
@@ -61,13 +61,13 @@ Xcursor.size:                     0
 ##Do fc-list | grep -i name_of_font
 !URxvt.font: xft:TerminessTTF Nerd Font Mono:size=13
 !URxvt.font: xft:Hack Nerd Font Mono:size=12
-URxvt.font: xft:MesloLGS Nerd Font Mono:size=12
+URxvt.font: xft:MesloLGS Nerd Font Mono:size=11
 ######################## FONTS #########################################
 
 
 URxvt.depth:                      32
-!URxvt.background:                 [122222]#1A1B1C
-URxvt.background:                 #0F0F0F
+URxvt.background:                 [122222]#1A1B1C
+!URxvt.background:                 #0F0F0F
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
@@ -230,4 +230,5 @@ URxvt*visualBell:                 boolean
 ! URxvt*tabbar-bg:                  colour
 ! URxvt*tabbar-fg:                  colour
 ! URxvt*url-launcher:               string
+xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id `xdotool search --class urxvt`
 
