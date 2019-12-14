@@ -111,35 +111,12 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="/home/sentinel/.gem/ruby/2.6.0/bin:$PATH"
 
-# Adding Go Language to PATH
-# export PATH=$PATH:/usr/local/go/bin
-# Modify GOPATH environment variable
-# export GOPATH=$HOME/.go
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliaxes, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliaxes can be placed here, though oh-my-zsh
-# users are encouraged to define aliaxes within the ZSH_CUSTOM folder.
-# For a full list of active aliaxes, run `aliax`.
 
 clear
 #archey3 -c black
