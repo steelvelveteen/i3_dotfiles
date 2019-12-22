@@ -6,7 +6,6 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-!!XTerm*background:        #222D31
 XTerm*foreground:        #d8d8d8
 XTerm*pointerColor:      #1ABB9B
 XTerm*faceName:          Fixed
@@ -57,12 +56,11 @@ XTerm*selectToClipboard: true
 Xcursor.theme: Maia-Cursor
 Xcursor.size:                     0
 
-######################## FONTS (MONO Fonts!!) #########################################
+######################## FONTS (MONO Fonts!!) ##############################
 ##Do fc-list | grep -i name_of_font
 !URxvt.font: xft:Hack Nerd Font Mono:size=12
 URxvt.font: xft:MesloLGS Nerd Font Mono:size=11
-######################## FONTS #########################################
-
+######################## END FONTS #########################################
 
 URxvt.depth:                      32
 !URxvt.background:                 [122222]#1A1B1C

@@ -9,9 +9,6 @@ export EDITOR=$VISUAL
 export PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 # Blur shit. It works!!!
 xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id `xdotool search --class urxvt`
@@ -31,10 +28,8 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%K{green}%F{black} \uf155 %f%F{green}
 
 #######################################################
 ## The actual prompt ##
-
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ram dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time battery)
-
 #######################################################
 
 # Separators
@@ -126,9 +121,9 @@ archey3 -c green
 # Aliaxes
 # #############################################################
 
-echo "\t~/.i3/config -> editi3"
-echo "\t~/.config/polybar/config -> editp"
-echo "\t~/.config/compton.conf -> editc"
+#echo "\t~/.i3/config -> editi3"
+#echo "\t~/.config/polybar/config -> editp"
+#echo "\t~/.config/compton.conf -> editc"
 echo "\t~/.Xresources -> editx"
 echo "\t~/.vimrc -> editv"
 echo "\t~/.config/nvim/init.vim -> editnv"
@@ -144,7 +139,6 @@ alias editz="vim ~/.zshrc"
 alias editx="vim ~/.Xresources"
 alias editv="vim ~/.vimrc"
 alias editnv="vim ~/.config/nvim/init.vim"
-alias editneo="nvim ~/.config/nvim/init.vim"
 alias edit9k="vim ~/.oh-my-zsh/themes/powerlevel9k/powerlevel9k.zsh-theme"
 alias sourcex="xrdb ~/.Xresources"
 alias music="mpd && ncmpcpp"
@@ -156,4 +150,5 @@ alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cd ~/repos/i3_dotfiles && gst'
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.zshrc ~/.zshrc.bak'
 alias gtypist='gtypist -c 5,0 --silent'
+alias removebeep='sudo rmmod pcspkr'
 ###############################################################
