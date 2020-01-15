@@ -10,14 +10,17 @@ export PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 
+# start starship
+eval "$(starship init zsh)"
 # Blur shit. It works!!!
 xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id `xdotool search --class urxvt`
 
 # Font mode for powerlevel9k
-POWERLEVEL9K_MODE="nerdfont-complete"
+#POWERLEVEL9K_MODE="nerdfont-complete"
 
 # Set name of the theme to load.
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
 
 # Prompt settings
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -96,7 +99,7 @@ ENABLE_CORRECTION="false"
 
 # Command execution time stamp shown in the history command output.
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git colored-man-pages extract sudo virtualenv)
+plugins=(git colored-man-pages extract sudo virtualenv zsh-autosuggestions)
 
 #Prompt elements
 ## add icons_test for testing to the left_prompt
@@ -129,6 +132,8 @@ echo "\t~/.vimrc -> editv"
 echo "\t~/.config/nvim/init.vim -> editnv"
 echo "\t~/.zshrc ->  editz"
 alias archey3="archey3 -c black"
+alias vim="nvim"
+alias neovim="nvim"
 alias mirrorUpdate="sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias cat="bat"
 alias ls="colorls"
@@ -147,7 +152,7 @@ alias showalias="cat ~/.zshrc | grep ^alias"
 alias clock="tty-clock -c -C 1 -s"
 alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
-alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cd ~/repos/i3_dotfiles && gst'
+alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.config/nvim/init.vim ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cd ~/repos/i3_dotfiles && gst'
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.zshrc ~/.zshrc.bak'
 alias gtypist='gtypist -c 5,0 --silent'
 alias removebeep='sudo rmmod pcspkr'

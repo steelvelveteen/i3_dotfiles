@@ -1,38 +1,35 @@
 "
-"     ██▒   █▓ ██▓ ███▄ ▄███▓ ██▀███   ▄████▄  
-"    ▓██░   █▒▓██▒▓██▒▀█▀ ██▒▓██ ▒ ██▒▒██▀ ▀█  
-"     ▓██  █▒░▒██▒▓██    ▓██░▓██ ░▄█ ▒▒▓█    ▄ 
+"     ██▒   █▓ ██▓ ███▄ ▄███▓ ██▀███   ▄████▄
+"    ▓██░   █▒▓██▒▓██▒▀█▀ ██▒▓██ ▒ ██▒▒██▀ ▀█
+"     ▓██  █▒░▒██▒▓██    ▓██░▓██ ░▄█ ▒▒▓█    ▄
 "      ▒██ █░░░██░▒██    ▒██ ▒██▀▀█▄  ▒▓▓▄ ▄██▒
 "       ▒▀█░  ░██░▒██▒   ░██▒░██▓ ▒██▒▒ ▓███▀ ░
 "       ░ ▐░  ░▓  ░ ▒░   ░  ░░ ▒▓ ░▒▓░░ ░▒ ▒  ░
-"       ░ ░░   ▒ ░░  ░      ░  ░▒ ░ ▒░  ░  ▒   
-"         ░░   ▒ ░░      ░     ░░   ░ ░        
-"          ░   ░         ░      ░     ░ ░      
-"         ░                           ░        
+"       ░ ░░   ▒ ░░  ░      ░  ░▒ ░ ▒░  ░  ▒
+"         ░░   ▒ ░░      ░     ░░   ░ ░
+"          ░   ░         ░      ░     ░ ░
+"         ░                           ░
 
 
 set ft=nasm
-" set mouse=a
-" set relativenumber
+set mouse=a
 "" Bell
 set noerrorbells
 set visualbell
 set autowrite
+set showtabline=2
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
-
 
 
 " Show line numbers
 set number
 " Set color scheme. Other good ones are bubblegum-256-dark, sorcerer, and zenburn
-set t_Co=256
+"set t_Co=256
 
-colorscheme mustang
-set background=dark
+"set background=dark
+"colorscheme mustang
 "colorscheme kuroi
-
 
 " keyboard shortcuts
 let mapleader = ','
@@ -189,8 +186,8 @@ let g:airline_theme='kolor'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled=1
-let g:airline_theme='minimalist'
-"let g:airline_theme='jellybeans'
+"let g:airline_theme='minimalist'
+let g:airline_theme='jellybeans'
 
 " unicode symbols
 let g:airline_left_sep = '»'
