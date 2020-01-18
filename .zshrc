@@ -10,17 +10,14 @@ export PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 
-# start starship
-eval "$(starship init zsh)"
 # Blur shit. It works!!!
 xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id `xdotool search --class urxvt`
 
 # Font mode for powerlevel9k
-#POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_MODE="nerdfont-complete"
 
 # Set name of the theme to load.
 ZSH_THEME="powerlevel9k/powerlevel9k"
-
 
 # Prompt settings
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -88,8 +85,8 @@ POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='blue'
 POWERLEVEL9K_BATTERY_VERBOSE=true
 
 user_with_helmet() {
-    #echo -n "\uf1a9 $(whoami)"
-    echo -n "\uf1a9 raven"
+    echo -n "\uf1a9 $(whoami)"
+    #echo -n "\uf1a9 raven"
     #echo -n "\uf1a9" #displays my cool icon
 }
 POWERLEVEL9K_CUSTOM_USER="user_with_helmet"
@@ -118,7 +115,7 @@ export LC_ALL=en_US.UTF-8
 
 clear
 #archey3 -c black
-archey3 -c green 
+archey3 -c green
 
 ###############################################################
 # Aliaxes
@@ -128,7 +125,7 @@ archey3 -c green
 #echo "\t~/.config/polybar/config -> editp"
 #echo "\t~/.config/compton.conf -> editc"
 echo "\t~/.Xresources -> editx"
-echo "\t~/.vimrc -> editv"
+#echo "\t~/.vimrc -> editv"
 echo "\t~/.config/nvim/init.vim -> editnv"
 echo "\t~/.zshrc ->  editz"
 alias archey3="archey3 -c black"

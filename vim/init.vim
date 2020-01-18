@@ -18,6 +18,7 @@
 set noerrorbells
 set visualbell
 set autowrite
+set autoindent
 set showtabline=2
 
 " vim-plug
@@ -36,10 +37,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'racer-rust/vim-racer'
-"Plug 'phildawes/racer'
-"Plug 'shougo/deoplete.nvim'
-"Plug 'w0rp/ale'
 call plug#end()
 
 map <F12> :call TrimWhiteSpace()<CR>
