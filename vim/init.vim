@@ -49,6 +49,9 @@ func! TrimWhiteSpace()
 " Clear search highlight with c-l
 noremap <silent> <c-l> :nohls<cr><c-l>
 
+" Braces completion
+inoremap {<Enter> {<Enter><Enter>}<Up><Tab>
+
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <c-space> ?
