@@ -147,10 +147,12 @@ alias music="mpd && ncmpcpp"
 alias sourcez="source ~/.zshrc"
 alias showalias="cat ~/.zshrc | grep ^alias"
 alias clock="tty-clock -c -C 1 -s"
-alias cmatrix="cmatrix -C  black -u 4"
+#alias cmatrix="cmatrix -C  black -u 4"
 alias repos='echo "Listing repositories ..." && cd ~/repos && ls'
 alias updatei3repo='cp ~/.zshrc ~/repos/i3_dotfiles && cp ~/.vimrc ~/repos/i3_dotfiles/vim && cp ~/.config/nvim/init.vim ~/repos/i3_dotfiles/vim && cp ~/.Xresources ~/repos/i3_dotfiles && cd ~/repos/i3_dotfiles && gst'
 alias backupdotfiles='cp ~/.vimrc ~/.vimrc.bak && cp ~/.Xresources ~/.Xresources.bak && cp ~/.zshrc ~/.zshrc.bak'
 alias gtypist='gtypist -c 5,0 --silent'
 alias removebeep='sudo rmmod pcspkr'
 ###############################################################
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

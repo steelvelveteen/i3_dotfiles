@@ -28,10 +28,6 @@ set showtabline=2
 " well... update. Duh!
 
 call plug#begin('~/.vim/plugged')
-Plug 'ryanoasis/vim-devicons' 
-" Plug 'hzchirs/vim-material' 
-Plug 'junegunn/goyo.vim'
-Plug 'gregsexton/MatchTag' 
 Plug 'jschmold/sweet-dark.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/vim-easy-align'
@@ -41,14 +37,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'farmergreg/vim-lastplace'
-Plug 'mhinz/vim-startify' 
-Plug '907th/vim-auto-save' 
-Plug 'tpope/vim-commentary'  
-Plug 'tpope/vim-sensible'
-Plug 'Yggdroot/indentLine'  
 call plug#end()
 
 map <F12> :call TrimWhiteSpace()<CR>
@@ -123,10 +111,6 @@ set runtimepath+=~/.vim/plugged/deoplete.nvim/
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources = {'rust': ['ale', 'racer']}
 
-" indentLine
-let g:indentLine_char = '▏'
-let g:indentLine_color_gui = '#363949'
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -163,5 +147,3 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-
-
