@@ -58,10 +58,12 @@ Xcursor.size:                     0
 
 ######################## FONTS (MONO Fonts!!) ##############################
 ##Do fc-list | grep -i name_of_font
-!URxvt.font: xft:Hack Nerd Font Mono:size=12
-!URxvt.font: xft:MesloLGS Nerd Font Mono:size=11
-URxvt.font: xft:Iosevka Nerd Font Mono: size=13
-
+!! Good for spaceship zsh
+URxvt.font: xft:Hack Nerd Font Mono:size=12 
+!! Almost good for spaceship zsh
+!URxvt.font: xft:MesloLGS Nerd Font Mono:size=11 
+!! Not for spaceship zsh
+!URxvt.font: xft:Iosevka Nerd Font Mono: size=13
 ######################## END FONTS #########################################
 
 URxvt.depth:                      32
